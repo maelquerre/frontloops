@@ -1,0 +1,126 @@
+html {
+    --line-color: #eeeeee;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    background: #4D515C;
+    overflow: hidden;
+}
+
+.container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.frame {
+    display: flex;
+    background: white;
+    border-radius: 5px;
+}
+
+.side {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.content {
+    width: 60%;
+}
+
+.content--main {
+    padding: 3em 5em;
+}
+
+.content--title {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.content--description p {
+    margin: 0;
+    color: darkgray;
+}
+
+.content--buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+}
+
+.sign-up-button {
+    position: relative;
+    padding: 2em;
+    margin-bottom: 2em;
+    border: 1px solid var(--line-color);
+    border-radius: 5px;
+}
+
+.sign-up-button:hover {
+    border-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up-button::before {
+    content: '';
+    position: absolute;
+    left: 2em;
+    bottom: 1.5em;
+    width: 2em;
+    height: 2em;
+}
+
+.sign-up-button.google::before {
+    background-image: url("img/googleplus.svg");
+}
+
+.sign-up-button.facebook::before {
+    background-image: url("img/facebook.svg");
+}
+
+.sign-up-button.twitter::before {
+    background-image: url("img/twitter.svg");
+}
+
+.sign-up-button,
+a, a:visited {
+    color: gray;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.sign-up-button:hover,
+a:hover, a:visited:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.content--footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 2em 3em 3em;
+    margin-top: 3em;
+    border-top: 1px solid var(--line-color);
+}
+
+.content--footer a,
+.content--footer a:visited {
+    text-decoration: none;
+}
+
+.side {
+    width: 40%;
+    background-image: url("img/side.jpg");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
