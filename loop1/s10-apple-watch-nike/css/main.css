@@ -18,12 +18,16 @@ body {
 
 .section {
     padding: 3em 2em;
+    min-height: 100vh;
+}
+
+.section.separated {
+    border-top: 1px solid gainsboro;
 }
 
 .top {
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid gainsboro;
 }
 
 .top::after {
