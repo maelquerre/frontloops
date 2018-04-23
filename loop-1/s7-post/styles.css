@@ -18,19 +18,27 @@ body {
 
 .card {
     display: flex;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
-.card--aside,
 .card--text,
 .card--footer {
     padding: 2em;
 }
 
 .card--aside {
+    padding: 2em 2em 6em; /* prevent the div collapsing */
     position: relative;
-    width: 30%;
+    width: 40%;
     color: white;
     background: #484956;
+}
+
+.card--content {
+    width: 60%;
+    background: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .card--title {
@@ -44,7 +52,7 @@ body {
 .card--title::after {
     content: '';
     display: block;
-    width: 2em;
+    width: 60px;
     height: 4px;
     margin-top: .5em;
     background: #E17B65;
@@ -69,12 +77,12 @@ body {
     margin-left: 1em;
 }
 
-.card--content {
-    width: 70%;
-    background: white;
+.card--text {
+    flex-grow: 1; /* ensure that the footer stays at the bottom */
 }
 
-.card--text {
+.card--text p {
+    line-height: 30px;
 }
 
 .card--text p:first-child:first-letter {
