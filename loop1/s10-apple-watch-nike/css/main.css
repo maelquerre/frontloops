@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    --custom-red: #E8635F;
+    --custom-dark-red: #d55b57;
+}
+
 body {
     margin: 0;
     font-family: Roboto, sans-serif;
@@ -12,7 +17,7 @@ body {
 }
 
 .section {
-    padding: 2em 1em;
+    padding: 3em 2em;
 }
 
 .top {
@@ -35,14 +40,14 @@ body {
     z-index: -1;
 }
 
-.header,
 .block {
     width: 1000px;
     margin: auto;
+    display: flex;
+    align-items: center;
 }
 
 .header {
-    display: flex;
     justify-content: space-between;
 }
 
@@ -76,11 +81,6 @@ body {
     border-color: black;
 }
 
-.block {
-    display: flex;
-    align-items: center;
-}
-
 .block.right {
     justify-content: flex-end;
 }
@@ -95,7 +95,8 @@ img {
 
 .block--content {
     width: 50%;
-    margin: 200px 0;
+    margin: 150px 0;
+    padding-right: 100px;
 }
 
 .content--title {
@@ -112,6 +113,59 @@ img {
     border-left: 2px solid gray;
 }
 
+.descriptions {
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.description {
+    width: 28%;
+}
+
+.description--title {
+    margin-bottom: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description-text {
+    position: relative;
+    line-height: 1.9;
+}
+
+.description-text.more::after {
+    content: '...';
+    position: absolute;
+    left: -.05em; /* adjustement */
+    bottom: -1em;
+    font-size: 5em;
+    font-weight: 300;
+    color: darkgray;
+}
+
+.learn-more {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--custom-red);
+}
+
+.learn-more::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    height: 2px;
+    margin-right: 1em;
+    background-color: var(--custom-red);
+    transition: width .2s;
+}
+
+.learn-more:hover::before {
+    width: 3em;
+}
+
 .background .content--title,
 .background .content--quote {
     color: white;
@@ -126,7 +180,12 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    background: #E8635F;
+    background-color: var(--custom-red);
+    transition: background .2s;
+}
+
+.button:hover {
+    background-color: var(--custom-dark-red);
 }
 
 .background {
@@ -135,7 +194,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: 0;
 }
 
 .background::after {
@@ -146,5 +205,5 @@ img {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.3);
-    z-index: -1;
+    z-index: -2;
 }
