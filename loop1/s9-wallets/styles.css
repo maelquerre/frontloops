@@ -1,0 +1,164 @@
+body {
+    color: #333333;
+    font-family: Roboto, sans-serif;
+    background: #F5CC7C;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.frame {
+    height: 550px;
+    display: flex;
+    border-radius: 5px;
+    background: white;
+}
+
+.side,
+.main {
+    overflow: scroll;
+    padding: 50px 40px;
+}
+
+.side {
+    width: 40%;
+    background: #F2F2F2;
+}
+
+.main {
+    width: 60%;
+}
+
+.header {
+    margin-bottom: 2em;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+}
+
+.side .header button {
+    cursor: pointer;
+    height: 2.5em;
+    width: 2.5em;
+    border: none;
+    background-color: transparent;
+    background: url("img/plus.svg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title {
+    text-transform: capitalize;
+}
+
+.wallet {
+    margin: 30px 0;
+    padding: 1em;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    transition: box-shadow .1s;
+}
+
+.wallet.current,
+.wallet:hover {
+    box-shadow: 0 0 0 2px #8B94C2;
+}
+
+.wallet img {
+    width: 70px;
+    margin-bottom: 1em;
+}
+
+.wallet--card-number,
+.wallet--card-validity {
+    opacity: 0.6;
+}
+
+.wallet--card-number {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+.balance {
+    font-weight: 700;
+}
+
+.balance--cents {
+    font-size: .7em;
+}
+
+.transactions {
+    border-top: 1px solid lightgray;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5em 0;
+}
+
+.transaction--item {
+    display: flex;
+    align-items: center;
+}
+
+.transaction--icon {
+    margin-right: 2em;
+}
+
+.transaction--icon::before {
+    content: '';
+    display: inline-block;
+    font-weight: 300;
+    width: 1.5em;
+    height: 1.5em;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.credit .transaction--icon::before {
+    background-image: url("img/plus.svg");
+}
+
+.debit .transaction--icon::before {
+    background-image: url("img/minus.svg");
+}
+
+.transaction--title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.transaction--detail {
+    margin-top: .5em;
+    color: darkgray;
+}
+
+.transaction .balance {
+    font-size: 1.3em;
+}
+
+.transaction.credit .balance {
+    color: #8CCC66;
+}
+
+.transaction.debit .balance {
+    color: #8B94C2;
+}
