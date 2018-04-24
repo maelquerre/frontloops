@@ -1,0 +1,134 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    background: #2E2E2E;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+}
+
+.card {
+    padding: 10% 0 5%;
+    background: #FBEB5F;
+}
+
+.card--header,
+.card--buttons {
+    width: 70%;
+    margin: auto;
+}
+
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.close {
+    position: relative;
+    padding: 0 15px 0 0; /* make the whole cross clickable */
+    opacity: .5;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close::before,
+.close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 2px;
+    background: black;
+}
+
+.close::before {
+    transform: rotate(45deg);
+}
+
+.close::after {
+    transform: rotate(-45deg);
+}
+
+.card--content {
+    position: relative;
+    margin-top: 60px;
+    padding: 60px 30px;
+    transform: translateX(15%);
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: darkgray;
+}
+
+.first-last-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-last-name .label {
+    width: 50%;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none; /* clear default border */
+    padding: 1em 0 .5em;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+input {
+    margin-bottom: 1.5em;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.card--buttons {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.card--button {
+    margin-left: 30px;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: black;
+    opacity: .5;
+    transition: opacity .2s;
+}
+
+.card--button:hover {
+    opacity: 1;
+}
