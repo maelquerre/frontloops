@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #B687E2, #8F8CEC);
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+}
+
+.frame {
+    border-radius: 5px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom right, #B780D5, #8B75C7);
+}
+
+.folder {
+    position: relative;
+    overflow: hidden;
+}
+
+.folder,
+.folder-content {
+    padding: 1.5em;
+}
+
+.folder.developed {
+    position: relative;
+    padding-top: 2.5em;
+}
+
+.folder.developed::after {
+    content: '';
+    position: absolute;
+    top: 2.5em;
+    right: 2em;
+    width: 1.5em;
+    height: 1em;
+    background: url("img/arrow.svg");
+}
+
+.folder--icon,
+.folder--title {
+    display: inline-block;
+}
+
+.folder--icon {
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    padding: .3em;
+    background: white;
+    border-radius: 50%;
+}
+
+.folder--icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2.3em;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: white;
+}
+
+.developed .folder--icon::before {
+    top: -2em;
+}
+
+.folder--image {
+    position: relative; /* overlay vertical line */
+    width: 1em;
+    height: 1em;
+}
+
+.folder--title {
+    margin-left: .5em;
+}
+
+.folder-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #60537E;
+}
+
+.folder--item {
+    position: relative;
+    padding: .5em;
+    padding-left: 2em;
+    text-decoration: none;
+    color: white;
+    color: rgba(255, 255, 255, .7);
+    transition: color .2s;
+}
+
+.folder--item::before {
+    content: '';
+    position: absolute;
+    vertical-align: middle;
+    top: 14px;
+    left: calc(8px + 1px);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    color: white;
+}
+
+.folder-content::after,
+.folder--item::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1em;
+    background: rgba(255, 255, 255, .5);
+}
+
+.folder-content::after {
+    height: 2em;
+    left: calc(2em + 4px);
+    bottom: 0;
+}
+
+.folder--item::after {
+    top: -.5em;
+    left: calc(.5em + 4px);
+}
+
+.folder--item:first-child::after {
+    height: 2em;
+    top: -1.5em;
+}
+
+.folder--item:hover {
+    color: white;
+}
