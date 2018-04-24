@@ -6,14 +6,14 @@
 
 body {
     margin: 0;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Roboto, sans-serif;
     background: #2E2E2E;
 }
 
 .container {
-    width: 400px;
-    margin: 100px auto;
+    width: 500px;
+    margin: 50px auto;
 }
 
 .card {
@@ -51,8 +51,8 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    width: 15px;
-    height: 2px;
+    width: 17px;
+    height: 3px;
     background: black;
 }
 
@@ -67,7 +67,7 @@ body {
 .card--content {
     position: relative;
     margin-top: 60px;
-    padding: 60px 30px;
+    padding: 15% 8%;
     transform: translateX(15%);
     background: white;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -84,6 +84,7 @@ body {
 .label {
     display: flex;
     flex-direction: column;
+    font-size: .9em;
     font-weight: 500;
     text-transform: uppercase;
     color: darkgray;
@@ -108,7 +109,7 @@ textarea {
 
 input {
     margin-bottom: 1.5em;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 textarea {
