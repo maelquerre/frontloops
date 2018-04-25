@@ -198,7 +198,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 0;
+    z-index: 1;
 }
 
 .background::after {
@@ -209,5 +209,5 @@ img {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.3);
-    z-index: -2;
+    z-index: -1;
 }
