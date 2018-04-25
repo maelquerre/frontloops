@@ -56,13 +56,14 @@ body {
     margin: 10% auto;
     background: white;
     border-radius: 5px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .card--header {
     position: relative;
     padding: 2em;
     background: url("img/food.jpg") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     color: white;
@@ -105,6 +106,10 @@ body {
     color: darkgray;
     text-decoration: none;
     border-bottom: 1px solid lightgray;
+}
+
+.card--item:last-child {
+    border-bottom: none;
 }
 
 .item--value {
