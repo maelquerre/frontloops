@@ -89,14 +89,12 @@ body {
     width: 2em;
 }
 
-.content--dates {
+.content--years-tab {
     position: relative;
-    display: flex;
     margin: 2em 0;
-    overflow: hidden;
 }
 
-.content--dates::after {
+.content--years-tab::after {
     content: '';
     position: absolute;
     top: 0;
@@ -107,7 +105,12 @@ body {
     pointer-events: none;
 }
 
-.date {
+.content--years {
+    display: flex;
+    overflow: scroll;
+}
+
+.year {
     padding-right: 1em;
     font-size: 1.5em;
     color: black;
@@ -116,8 +119,8 @@ body {
     transition: opacity .2s;
 }
 
-.date.current,
-.date:hover {
+.year.active,
+.year:hover {
     opacity: 1;
 }
 
