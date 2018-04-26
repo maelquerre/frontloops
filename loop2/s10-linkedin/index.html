@@ -49,10 +49,10 @@
 </div>
 <div class="container">
     <div class="content navigation">
-        <a class="nav--item current" href="#">Posts</a>
-        <a class="nav--item" href="#">Background</a>
-        <a class="nav--item" href="#">Recommendations</a>
-        <a class="nav--item" href="#">Following</a>
+        <a class="nav--item current" href="#posts">Posts</a>
+        <a class="nav--item" href="#background">Background</a>
+        <a class="nav--item" href="#recommendations">Recommendations</a>
+        <a class="nav--item" href="#following">Following</a>
     </div>
 </div>
 <div class="container main">
@@ -109,8 +109,9 @@
                 </a>
             </div>
         </div>
+
         <div class="middle">
-            <div class="block">
+            <div class="block" id="posts">
                 <div class="block--header">
                     <div class="block--title">
                         Posts
@@ -155,18 +156,10 @@
                 </div>
             </div>
 
-            <div class="block background">
+            <div class="block" id="background">
                 <div class="block--header">
                     <div class="block--title">
                         Background
-                    </div>
-                    <div>
-                        <button class="button nav-button">
-                            <i class="material-icons button--icon">keyboard_arrow_left</i>
-                        </button>
-                        <button class="button nav-button">
-                            <i class="material-icons button--icon">keyboard_arrow_right</i>
-                        </button>
                     </div>
                 </div>
 
@@ -308,7 +301,7 @@
                 </div>
             </div>
 
-            <div class="block recommendations">
+            <div class="block" id="recommendations">
                 <div class="block--header">
                     <div class="block--title">
                         Recommendations
@@ -369,7 +362,7 @@
                             Vestibulum malesuada eros massa, id porta justo
                             semper sed. Praesent posuere, erat eu maximus
                             porttitor, leo felis fringilla magna, non
-                            sollicitudin odio lacus sed augue.
+                            sollicitudin.
                         </div>
                         <div class="recommendation--author">
                             <img class="avatar small"
@@ -387,18 +380,10 @@
                 </div>
             </div>
 
-            <div class="block following">
+            <div class="block" id="following">
                 <div class="block--header">
                     <div class="block--title">
                         Following
-                    </div>
-                    <div>
-                        <button class="button nav-button">
-                            <i class="material-icons button--icon">keyboard_arrow_left</i>
-                        </button>
-                        <button class="button nav-button">
-                            <i class="material-icons button--icon">keyboard_arrow_right</i>
-                        </button>
                     </div>
                 </div>
 

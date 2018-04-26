@@ -30,6 +30,7 @@ body {
 
 .main .content {
     display: flex;
+    align-items: flex-start;
 }
 
 .content {

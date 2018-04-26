@@ -55,7 +55,7 @@
     color: darkgray;
 }
 
-.background .block--item {
+#background .block--item {
     margin-left: 2.5em;
 }
 
@@ -183,7 +183,7 @@
     border-radius: 3px;
 }
 
-.recommendations .block--content {
+#recommendations .block--content {
     align-items: flex-end;
 }
 
