@@ -1,0 +1,56 @@
+button {
+    padding: 0;
+}
+
+.button {
+    outline: none;
+    cursor: pointer;
+    transition: background .15s, border .15s;
+}
+
+.default-button {
+    padding: .5em;
+    font-size: 1em;
+    font-weight: lighter;
+    color: var(--blue);
+    background: white;
+    border: 1px solid var(--blue);
+    border-radius: 2em;
+}
+
+.default-button.filled {
+    color: white;
+    background: var(--blue);
+}
+
+.default-button .button--icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.3em;
+}
+
+.default-button:hover {
+    color: white;
+    background: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.nav-button {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.nav-button .button--icon {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
