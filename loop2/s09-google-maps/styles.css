@@ -113,6 +113,12 @@ body {
     width: 50px;
 }
 
+.city.arrival .dot::after {
+    right: 95%;
+    width: 200px;
+    opacity: 0.5;
+}
+
 .city.departure .dot::before {
     content: '';
     position: absolute;
@@ -122,12 +128,6 @@ body {
     height: 20px;
     background: url("img/car.svg") no-repeat center;
     transform: scale(0.8);
-}
-
-.city.arrival .dot::after {
-    right: 95%;
-    width: 250px;
-    opacity: 0.5;
 }
 
 .journey--info {
