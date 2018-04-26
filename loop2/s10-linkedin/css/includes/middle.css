@@ -224,6 +224,7 @@
 
 .recommendation--author {
     display: flex;
+    align-items: center;
 }
 
 .recommendation--author-info {
