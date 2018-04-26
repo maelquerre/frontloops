@@ -1,6 +1,6 @@
 @import "common.css";
-@import "header.css";
-@import "navigation.css";
-@import "profile.css";
-@import "middle.css";
-@import "buttons.css";
+@import "includes/header.css";
+@import "includes/navigation.css";
+@import "includes/profile.css";
+@import "includes/middle.css";
+@import "includes/buttons.css";
