@@ -33,29 +33,29 @@
     width: 20%;
 }
 
-.block--content.three .block--item img {
+.post--image {
     width: 100%;
 }
 
-.block--link {
+.block--post {
     color: currentColor;
     text-decoration: none;
 }
 
-.block--link .link--title {
+.block--post .post--title {
     margin: .5em 0;
 }
 
-.block--link:hover .link--title {
+.block--post:hover .post--title {
     text-decoration: underline;
 }
 
-.block--link .link--date {
+.block--post .post--date {
     font-size: .8em;
     color: darkgray;
 }
 
-.block--item {
+.background .block--item {
     margin-left: 2.5em;
 }
 
@@ -75,7 +75,7 @@
     left: -35px;
 }
 
-.item--cv {
+.block--item-cv {
     margin-top: 1em;
 }
 
@@ -112,7 +112,7 @@
     z-index: 0;
 }
 
-.item--cv:last-child .item--cv-date::after {
+.block--item-cv:last-child .item--cv-date::after {
     display: none;
 }
 
@@ -181,4 +181,61 @@
     padding: .5em .8em;
     background: var(--line-colour);
     border-radius: 3px;
+}
+
+.recommendations .block--content {
+    align-items: flex-end;
+}
+
+.recommendation--comment {
+    margin-bottom: 20px;
+    padding: 1em;
+    position: relative;
+    border: 1px solid var(--line-colour);
+}
+
+.recommendation--comment::before,
+.recommendation--comment::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.recommendation--comment::before {
+    bottom: 0;
+    left: 9px;
+    border: 20px solid transparent;
+    border-top-color: var(--line-colour);
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.recommendation--comment::after {
+    bottom: 2px;
+    left: 10px;
+    border: 19px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.recommendation--author {
+    display: flex;
+}
+
+.recommendation--author-info {
+    margin-left: 1em;
+    font-size: .9em;
+}
+
+.recommendation--author-name {
+    font-weight: 500;
+}
+
+.recommendation--author-company {
+    font-size: .9em;
+    color: darkgray;
 }
