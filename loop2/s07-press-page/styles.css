@@ -87,6 +87,7 @@ body {
 
 .content--menu {
     width: 2em;
+    cursor: pointer;
 }
 
 .content--years-tab {
