@@ -5,6 +5,8 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: Roboto, sans-serif;
     background: #F2F6F8;
 }
