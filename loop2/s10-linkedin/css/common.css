@@ -38,6 +38,15 @@ body {
     margin: auto;
 }
 
+.link {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
 .avatar {
     border-radius: 50%;
 }
@@ -80,4 +89,9 @@ body {
 .author-badge--company {
     font-size: .9em;
     color: darkgray;
+}
+
+.footer {
+    padding: 2em;
+    text-align: center;
 }

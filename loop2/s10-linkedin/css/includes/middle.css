@@ -37,25 +37,25 @@
     width: 100%;
 }
 
-.block--post {
+.post {
     color: currentColor;
     text-decoration: none;
 }
 
-.block--post .post--title {
+.post--title {
     margin: .5em 0;
 }
 
-.block--post:hover .post--title {
+.post:hover .post--title {
     text-decoration: underline;
 }
 
-.block--post .post--date {
+.post--date {
     font-size: .8em;
     color: darkgray;
 }
 
-#background .block--item {
+.block--item.section {
     margin-left: 2.5em;
 }
 
@@ -121,15 +121,6 @@
     margin: .5em 0;
 }
 
-.item--cv-subtitle {
-    text-decoration: none;
-    color: var(--blue);
-}
-
-.item--cv-subtitle:hover {
-    text-decoration: underline;
-}
-
 .block--item-skills,
 .item--skills-text {
     display: flex;
@@ -189,7 +180,7 @@
 }
 
 .recommendation--comment {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 1em;
     position: relative;
     border: 1px solid var(--line-colour);
@@ -223,6 +214,49 @@
     border-left: 0;
 }
 
+.item--image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    text-align: center;
+    border: 1px solid var(--line-colour);
+}
+
+.brand-logo {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.item--image-title {
+    margin: 1em 0 .5em;
+}
+
+.plus-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: .3em;
+    padding-top: 2px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+}
+
+#following .default-button {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.button.center {
+    display: block;
+    margin: auto;
+}
+
+    /* Aside */
+
 .aside--section {
     margin-bottom: 2.5em;
 }
@@ -240,7 +274,7 @@
     text-align: center;
 }
 
-.influencer--avatar .icon {
+.influencer--avatar .influencer--icon {
     padding-top: -1em;
 }
 

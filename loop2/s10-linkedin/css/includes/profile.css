@@ -57,10 +57,12 @@
     font-weight: 500;
 }
 
-.stats--title,
-.profile--link-wrapper,
+.stats--title {
+    color: darkgray;
+}
+
 .profile--link {
-    font-size: .9em;
+    font-size: .8em;
     color: darkgray;
 }
 

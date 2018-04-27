@@ -9,9 +9,10 @@ button {
 }
 
 .default-button {
-    padding: .5em;
+    padding: .5em 2em;
+    font-family: inherit;
     font-size: 1em;
-    font-weight: lighter;
+    font-weight: 300;
     color: var(--blue);
     background: white;
     border: 1px solid var(--blue);
@@ -40,7 +41,7 @@ button {
     text-align: center;
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid currentColor;
     border-radius: 50%;
 }
 
