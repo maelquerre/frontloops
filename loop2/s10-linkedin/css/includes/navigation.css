@@ -20,7 +20,12 @@
     width: 100%;
     height: 2px;
     background: var(--blue);
+    opacity: .7;
     transition: transform .15s;
+}
+
+.nav--item.current::after {
+    opacity: 1;
 }
 
 .nav--item.current::after,
