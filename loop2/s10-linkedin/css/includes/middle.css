@@ -222,21 +222,35 @@
     border-left: 0;
 }
 
-.recommendation--author {
-    display: flex;
-    align-items: center;
+.aside--section {
+    margin-bottom: 2.5em;
 }
 
-.recommendation--author-info {
-    margin-left: 1em;
-    font-size: .9em;
+.aside--section-title {
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
 }
 
-.recommendation--author-name {
+.aside .author-badge {
+    margin-bottom: 1.5em;
+}
+
+.aside--influencer {
+    text-align: center;
+}
+
+.influencer--avatar .icon {
+    padding-top: -1em;
+}
+
+.influencer--name {
+    margin-top: .5em;
+    font-size: 1.2em;
     font-weight: 500;
 }
 
-.recommendation--author-company {
+.influencer--company {
+    margin-top: .3em;
     font-size: .9em;
     color: darkgray;
 }

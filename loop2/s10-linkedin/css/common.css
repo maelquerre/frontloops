@@ -52,10 +52,32 @@ body {
     height: 120px;
 }
 
-/* Blocks */
+.block,
+.aside--section {
+    margin: 1em .5em .5em;
+}
 
 .block {
-    margin: 1em .5em .5em;
     background: white;
     border: 1px solid var(--light-blue);
+}
+
+.author-badge {
+    display: flex;
+    align-items: center;
+}
+
+.author-badge--info {
+    margin-left: 1em;
+    font-size: .9em;
+}
+
+.author-badge--name {
+    font-weight: 500;
+    margin-bottom: .4em;
+}
+
+.author-badge--company {
+    font-size: .9em;
+    color: darkgray;
 }
