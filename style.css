@@ -129,8 +129,18 @@ body {
 }
 
 .footer {
-    padding: 2em 0;
+    padding: 4em 0;
+    font-weight: 300;
     color: white;
     background: #484956;
     text-align: center;
+}
+
+.footer--element {
+    padding: 0 2em;
+    border-right: 1px solid white;
+}
+
+.footer--element:last-child {
+    border: none;
 }
