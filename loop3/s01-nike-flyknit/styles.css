@@ -25,6 +25,11 @@ body {
     width: 100%;
 }
 
+.side,
+.card {
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, .3);
+}
+
 .side {
     width: 40%;
     position: relative;
