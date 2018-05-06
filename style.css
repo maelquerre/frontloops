@@ -1,0 +1,36 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    color: #333333;
+}
+
+.container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.heading {
+    font-weight: 700;
+}
+
+.main-title {
+    font-size: 3em;
+}
+
+.list--title {
+    font-size: 2em;
+}
+
+.list--items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
