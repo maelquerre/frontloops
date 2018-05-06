@@ -75,10 +75,6 @@ body {
     font-weight: 500;
 }
 
-.side--text {
-
-}
-
 .content--header {
     display: flex;
     align-items: center;
@@ -109,6 +105,41 @@ body {
 .content--years {
     display: flex;
     overflow: scroll;
+}
+
+/* Scrollbar customisation */
+
+.content--years::-webkit-scrollbar,
+.content--years::-webkit-scrollbar-track,
+.content--years::-webkit-scrollbar-thumb {
+    visibility: hidden;
+}
+
+.content--years:hover::-webkit-scrollbar,
+.content--years:hover::-webkit-scrollbar-track,
+.content--years:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+/* width */
+.content--years::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+/* track */
+.content--years::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* handle */
+.content--years::-webkit-scrollbar-thumb {
+    background: #afd7dc;
+}
+
+/* handle on hover */
+.content--years::-webkit-scrollbar-thumb:hover {
+    background: #a9cfd4;
 }
 
 .year {
