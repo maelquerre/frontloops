@@ -12,7 +12,7 @@ $(document).ready(function () {
             /* Background */
             $(this).append("<div class='background'></div>");
             $(this).find(".background").css({
-                "background": "url('img/l" + loop + "s" + step + ".png') no-repeat center",
+                "background": "url('img/l" + loop + "s" + step + ".jpg') no-repeat center",
                 "background-size": "cover"
             });
         });
