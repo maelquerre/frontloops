@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".list--items").each(function (loop) {
+    $(".loop--items").each(function (loop) {
         loop += 1;
         $(this).find(".item").each(function (step) {
 
