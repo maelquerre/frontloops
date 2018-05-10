@@ -1,5 +1,63 @@
 .icon-sprite {
-  width: 0;
-  height: 0;
-  display: none;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background: #293246;
+}
+
+.container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.frame {
+    display: flex;
+    padding: 50px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image {
+    position: relative;
+    flex-basis: 65%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image.square {
+    width: 200px;
+    flex-basis: 30%;
+}
+
+.image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+.image.square img {
+    width: auto;
+    height: 100%;
 }
