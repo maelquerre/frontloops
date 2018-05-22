@@ -15,12 +15,22 @@
     <div class="frame">
         <div class="side">
             <div class="side--icons">
-                <div class="logo"></div>
+                <div class="logo">
+                    <svg class="icon"><use xlink:href="#logo"></use></svg>
+                </div>
                 <div class="side--buttons">
-                    <div class="side-button search"></div>
-                    <div class="side-button favorite"></div>
-                    <div class="side-button grid"></div>
-                    <div class="side-button layers"></div>
+                    <div class="side-button search">
+                        <svg class="icon"><use xlink:href="#search"></use></svg>
+                    </div>
+                    <div class="side-button favorite">
+                        <svg class="icon"><use xlink:href="#favorite"></use></svg>
+                    </div>
+                    <div class="side-button grid active">
+                        <svg class="icon"><use xlink:href="#grid"></use></svg>
+                    </div>
+                    <div class="side-button layers">
+                        <svg class="icon"><use xlink:href="#layers"></use></svg>
+                    </div>
                 </div>
             </div>
             <div class="side--avatar">
@@ -29,7 +39,7 @@
         </div>
         <div class="content">
             <div class="header">
-                <div class="number-of-images">
+                <div class="subtitle">
                     29.309 images
                 </div>
                 <div class="title-container">
@@ -42,21 +52,40 @@
                 </div>
             </div>
 
-            <div class="images">
-                <div class="image square">
-                    <img src="img/1.jpg">
+            <div class="grid">
+                <div class="grid--row">
+                    <div class="image" style="background-image: url('./img/1.jpg')">
+                        <div class="image--actions">
+                            <svg class="icon image--action"><use xlink:href="#favorite"></use></svg>
+                            <svg class="icon image--action"><use xlink:href="#layers"></use></svg>
+                        </div>
+                    </div>
+                    <div class="image double" style="background-image: url('./img/2.jpg')">
+                        <div class="image--actions">
+                            <svg class="icon image--action"><use xlink:href="#favorite"></use></svg>
+                            <svg class="icon image--action"><use xlink:href="#layers"></use></svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="image">
-                    <img src="img/2.jpg">
-                </div>
-                <div class="image square">
-                    <img src="img/3.jpg">
-                </div>
-                <div class="image square">
-                    <img src="img/4.jpg">
-                </div>
-                <div class="image square">
-                    <img src="img/5.jpg">
+                <div class="grid--row">
+                    <div class="image" style="background-image: url('./img/3.jpg')">
+                        <div class="image--actions">
+                            <svg class="icon image--action"><use xlink:href="#favorite"></use></svg>
+                            <svg class="icon image--action"><use xlink:href="#layers"></use></svg>
+                        </div>
+                    </div>
+                    <div class="image" style="background-image: url('./img/4.jpg')">
+                        <div class="image--actions">
+                            <svg class="icon image--action"><use xlink:href="#favorite"></use></svg>
+                            <svg class="icon image--action"><use xlink:href="#layers"></use></svg>
+                        </div>
+                    </div>
+                    <div class="image" style="background-image: url('./img/5.jpg')">
+                        <div class="image--actions">
+                            <svg class="icon image--action"><use xlink:href="#favorite"></use></svg>
+                            <svg class="icon image--action"><use xlink:href="#layers"></use></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
