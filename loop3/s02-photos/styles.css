@@ -41,7 +41,7 @@ body {
 
 .side--icons {
     color: #ccc;
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #ccc;
 }
 
 .side--buttons {
@@ -50,6 +50,7 @@ body {
 
 .logo {
     color: var(--blue);
+    cursor: pointer;
 }
 
 .side-button {
@@ -100,7 +101,7 @@ body {
 }
 
 .subtitle {
-    color: gray;
+    color: #aaa;
 }
 
 .title-container {
