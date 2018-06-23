@@ -64,7 +64,7 @@ body {
     vertical-align: text-bottom;
 }
 
-.container {
+.content {
     width: 60%;
     padding: 50px;
     overflow: scroll; /* responsive detail */
