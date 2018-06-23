@@ -61,6 +61,7 @@ a:hover {
     padding: 1em 0;
     color: white;
     background: var(--primary-color);
+    border-radius: 3px;
 }
 
 .loop-items {
