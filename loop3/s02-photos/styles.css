@@ -18,7 +18,7 @@ body {
     background: #293246;
 }
 
-.content {
+.container {
     width: 1000px;
     margin: 50px auto;
 }
@@ -96,7 +96,7 @@ body {
     border-radius: 50%;
 }
 
-.content {
+.container {
     width: 90%;
 }
 

@@ -19,21 +19,21 @@ body {
     color: #333333;
 }
 
-.content {
+.container {
     border-bottom: 1px solid var(--line-colour);
 }
 
-.content.main,
+.container.main,
 .footer {
     background: #F7F8FA;
 }
 
-.main .content {
+.main .container {
     display: flex;
     align-items: flex-start;
 }
 
-.content {
+.container {
     width: 1100px;
     margin: auto;
 }
