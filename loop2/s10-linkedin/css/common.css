@@ -28,7 +28,7 @@ body {
     background: #F7F8FA;
 }
 
-.main .container {
+.main .content {
     display: flex;
     align-items: flex-start;
 }
