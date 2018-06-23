@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-.container {
+.content {
     width: 1000px;
     margin: 100px auto;
 }

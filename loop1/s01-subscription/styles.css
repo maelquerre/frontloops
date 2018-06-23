@@ -21,7 +21,7 @@ body {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
 }
 
-.item {
+.loop-item {
     padding: 1em 2em;
     width: 33.33%;
     border-radius: inherit;
@@ -29,7 +29,7 @@ body {
     cursor: pointer;
 }
 
-.item:hover {
+.loop-item:hover {
     background-color: #F7F7F7;
 }
 
@@ -38,13 +38,13 @@ body {
     margin-bottom: 1em;
 }
 
-.item--title {
+.item-title {
     font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: .2em;
 }
 
-.item--title, .item--price {
+.item-title, .item--price {
     color: #5775D3;
 }
 

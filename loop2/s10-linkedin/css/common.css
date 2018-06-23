@@ -19,11 +19,11 @@ body {
     color: #333333;
 }
 
-.container {
+.content {
     border-bottom: 1px solid var(--line-colour);
 }
 
-.container.main,
+.content.main,
 .footer {
     background: #F7F8FA;
 }
