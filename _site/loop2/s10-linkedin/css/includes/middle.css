@@ -1,0 +1,291 @@
+.middle {
+    width: 60%;
+}
+
+.block--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid var(--line-colour);
+}
+
+.block--header,
+.block--content {
+    padding: 1em;
+}
+
+.block--title {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.block--content.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block--content.three .block--item {
+    width: 30%;
+}
+
+.block--content.four .block--item {
+    width: 20%;
+}
+
+.post--image {
+    width: 100%;
+}
+
+.post {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.post--title {
+    margin: .5em 0;
+}
+
+.post:hover .post--title {
+    text-decoration: underline;
+}
+
+.post--date {
+    font-size: .8em;
+    color: darkgray;
+}
+
+.block--item.section {
+    margin-left: 2.5em;
+}
+
+.block--item:first-child .block--item-title {
+    margin-top: 0;
+}
+
+.block--item-title {
+    position: relative;
+    font-size: 1.5em;
+    margin: 1em 0 .5em;
+}
+
+.block--item-icon {
+    position: absolute;
+    top: 2px;
+    left: -35px;
+}
+
+.block--item-cv {
+    margin-top: 1em;
+    padding-left: 1em;
+}
+
+.item--cv-date {
+    position: relative;
+    font-size: .7em;
+    text-transform: uppercase;
+    color: darkgray;
+}
+
+.item--cv-date::before,
+.item--cv-date::after {
+    content: '';
+    position: absolute;
+}
+
+.item--cv-date::before {
+    top: 2px;
+    left: -16px;
+    width: 9px;
+    height: 9px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.item--cv-date::after {
+    top: 5px;
+    left: -12px;
+    width: 1px;
+    height: 80px;
+    background: lightgray;
+    z-index: 0;
+}
+
+.block--item-cv:last-child .item--cv-date::after {
+    display: none;
+}
+
+.item--cv-title {
+    margin: .5em 0;
+}
+
+.block--item-skills,
+.item--skills-text {
+    display: flex;
+    align-items: center;
+}
+
+.block--item-skills {
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.item--skills-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4em;
+    height: 2.4em;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+}
+
+.item--skills-title {
+    margin-left: 1em;
+}
+
+.item--skills-avatars {
+    display: flex;
+}
+
+.item--skills-avatars .avatar {
+    margin: 0 .5em;
+}
+
+.item--skills-avatars .avatar.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .5em;
+    font-weight: 700;
+    background: var(--line-colour);
+}
+
+.block--item-tags {
+    display: flex;
+}
+
+.tag {
+    font-size: .8em;
+    margin-right: 1em;
+    padding: .5em .8em;
+    background: var(--line-colour);
+    border-radius: 3px;
+}
+
+#recommendations .block--content {
+    align-items: flex-end;
+}
+
+.recommendation--comment {
+    margin-bottom: 25px;
+    padding: 1em;
+    position: relative;
+    border: 1px solid var(--line-colour);
+}
+
+.recommendation--comment::before,
+.recommendation--comment::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.recommendation--comment::before {
+    bottom: 0;
+    left: 9px;
+    border: 20px solid transparent;
+    border-top-color: var(--line-colour);
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.recommendation--comment::after {
+    bottom: 2px;
+    left: 10px;
+    border: 19px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.item--image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    text-align: center;
+    border: 1px solid var(--line-colour);
+}
+
+.brand-logo {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.item--image-title {
+    margin: 1em 0 .5em;
+}
+
+.plus-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: .3em;
+    padding-top: 2px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+}
+
+#following .default-button {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.button.center {
+    display: block;
+    margin: auto;
+}
+
+    /* Aside */
+
+.aside--section {
+    margin-bottom: 2.5em;
+}
+
+.aside--section-title {
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+}
+
+.aside .author-badge {
+    margin-bottom: 1.5em;
+}
+
+.aside--influencer {
+    text-align: center;
+}
+
+.influencer--avatar .influencer--icon {
+    padding-top: -1em;
+}
+
+.influencer--name {
+    margin-top: .5em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.influencer--company {
+    margin-top: .3em;
+    font-size: .9em;
+    color: darkgray;
+}

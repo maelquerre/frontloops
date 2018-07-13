@@ -1,0 +1,226 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background: #497BF3;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.frame {
+    background: white;
+}
+
+.header,
+.inner {
+    padding: 2em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header--title {
+    text-transform: uppercase;
+}
+
+.header--icon {
+    opacity: 0.5;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.header--icon:hover {
+    opacity: 1;
+}
+
+.journey {
+    padding: 2em 3em 3em;
+    position: relative;
+    width: 100%;
+    color: white;
+    background: url("img/map.png") no-repeat center;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.journey::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 123, 243, 0.7);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.journey--cities {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.city {
+    position: relative;
+    line-height: 10px;
+    font-weight: 500;
+}
+
+.city .dot,
+.city .dot::after {
+    position: absolute;
+    line-height: 10px;
+    background: white;
+}
+
+.city .dot {
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.city.departure .dot {
+    right: -2em;
+}
+
+.city.arrival .dot {
+    left: -2em;
+}
+
+.city .dot::after {
+    content: '';
+    top: 4px;
+    height: 2px;
+}
+
+.city.departure .dot::after {
+    left: 95%;
+    width: 50px;
+}
+
+.city.arrival .dot::after {
+    right: 95%;
+    width: 200px;
+    opacity: 0.5;
+}
+
+.city.departure .dot::before {
+    content: '';
+    position: absolute;
+    left: calc(99% + 39px);
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("img/car.svg") no-repeat center;
+    transform: scale(0.8);
+}
+
+.journey--info {
+    display: inline-block;
+}
+
+.journey--info.time {
+    margin-right: 5em;
+}
+
+.info--title {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.journey--button {
+    position: absolute;
+    right: 2em;
+    bottom: -1.5em;
+    padding: .8em .8em .8em 3em;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    background: #497BF3;
+    border-radius: 5px;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.journey--button::before {
+    content: '';
+    position: absolute;
+    left: 1em;
+    width: 20px;
+    height: 20px;
+    background: url("img/location.svg") no-repeat center;
+}
+
+.journey--button:hover {
+    opacity: 0.9;
+}
+
+.inner {
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.inner--city {
+    margin-bottom: 1em;
+}
+
+.inner--step {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.step--text {
+    margin-left: 2em;
+}
+
+.step--duration {
+    font-size: .9em;
+    color: darkgray;
+    margin-bottom: .3em;
+}
+
+.streetview {
+    margin: 1em 0;
+    position: relative;
+    height: 75px;
+    width: 100%;
+}
+
+.streetview::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    width: 20px;
+    height: 25px;
+    background: url("img/marker.svg");
+    z-index: 1;
+}
+
+.streetview::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    background: url("img/streetview.jpg") no-repeat center;
+    background-size: cover;
+    border-radius: 5px;
+}

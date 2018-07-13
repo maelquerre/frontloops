@@ -1,0 +1,170 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background: url("img/background.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.frame {
+    overflow: hidden; /* for the button not to expand the frame */
+    margin: 10% auto;
+    padding-top: 1.5em;
+    width: 400px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dot {
+    position: relative;
+    margin-right: 6px;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #DEDEDE;
+}
+
+.dot.current::after {
+    background: #AAAAAA;
+}
+
+.payment-title {
+    margin-top: .5em;
+    letter-spacing: 1px;
+}
+
+.payment-title,
+.payment-methods,
+.next-step-button {
+    font-weight: 500;
+}
+
+.payment-methods {
+    text-align: left;
+}
+
+.payment-method,
+.next-step-button {
+    font-size: .8em;
+}
+
+.payment-method {
+    display: block;
+    position: relative;
+    padding: 2em 0 2em 5em;
+    letter-spacing: 1px;
+    color: #BDB7B1;
+    cursor: pointer;
+    border-top: 1px solid #E2E2E2;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+/* Hide the default radio button */
+.payment-methods input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.payment-method:hover {
+    background-color: #F1F1F1;
+}
+
+.payment-method::before,
+.checkmark {
+    position: absolute;
+    top: 0;
+    height: 5em; /* depend on the padding of .payment-method */
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.payment-method::before {
+    content: "";
+    left: 1em;
+    width: 40px;
+}
+
+.payment-method::after {
+    right: 1em;
+    width: 20px;
+}
+
+.payment-method.visa::before {
+    background-image: url("img/visa.svg");
+}
+
+.payment-method.mastercard::before {
+    background-image: url("img/mastercard.svg");
+}
+
+.payment-method.maestro::before {
+    background-image: url("img/maestro.svg");
+}
+
+.checkmark {
+    right: 1em;
+    width: 20px;
+}
+
+input:checked + .payment-method > .checkmark {
+    background-image: url("img/check.svg");
+}
+
+input:checked + .payment-method {
+    color: black;
+}
+
+.next-step-button,
+.next-step-button:visited {
+    display: block;
+    width: 100%;
+    padding: 1.5em 0;
+    color: white;
+    background-color: #5B8DDA;
+    text-decoration: none;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.next-step-button::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: .3em;
+    margin-bottom: -.2em;
+    background: url("img/arrow.svg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.next-step-button:hover {
+    background-color: #6490EC;
+}
+
+.next-step-button:active {
+    transform: translateY(2px);
+}

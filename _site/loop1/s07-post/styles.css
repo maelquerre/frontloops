@@ -1,0 +1,135 @@
+html, body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background: #F1CD9A;
+}
+
+.frame {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.card--text,
+.card--footer {
+    padding: 2em;
+}
+
+.card--aside {
+    padding: 2em 2em 6em; /* prevent the div collapsing */
+    position: relative;
+    width: 40%;
+    color: white;
+    background: #484956;
+}
+
+.card--content {
+    width: 60%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card--title {
+    font-weight: 500;
+}
+
+.card--subtitle {
+    font-weight: 300;
+}
+
+.card--title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin-top: .5em;
+    background: #E17B65;
+
+}
+
+.avatar {
+    position: absolute;
+    left: 2em;
+    bottom: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.avatar--image {
+    width: 3em;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.avatar--caption {
+    margin-left: 1em;
+}
+
+.card--text {
+    flex-grow: 1; /* ensure that the footer stays at the bottom */
+}
+
+.card--text p {
+    line-height: 30px;
+}
+
+.card--text p:first-child::first-letter {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.card--text p:last-child {
+    margin-bottom: 0;
+}
+
+.card--footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8em;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card--footer a,
+.card--footer a:visited {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.footer--date-time {
+    font-weight: 700;
+}
+
+.footer--comments {
+    margin-right: 1em;
+}
+
+.footer--comments::before,
+.footer--more::before {
+    content: '';
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    vertical-align: middle;
+    background-size: 100%;
+}
+
+.footer--comments::before {
+    margin-right: .5em;
+    background-image: url("img/comment.svg");
+}
+
+.footer--more::before {
+    background-image: url("img/more.svg");
+}

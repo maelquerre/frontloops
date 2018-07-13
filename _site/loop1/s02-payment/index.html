@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loop 1 - Step 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+<div class="frame">
+    <div class="dots">
+        <span class="dot current">&nbsp;</span>
+        <span class="dot">&nbsp;</span>
+        <span class="dot">&nbsp;</span>
+    </div>
+    <h2 class="payment-title">Payment method</h2>
+    <form class="payment-methods">
+        <input type="radio" name="payment" id="visa">
+        <label for="visa" class="payment-method visa">Visa
+            <span class="checkmark"></span>
+        </label>
+        <input type="radio" name="payment" id="mastercard" checked>
+        <label for="mastercard" class="payment-method mastercard">MasterCard
+            <span class="checkmark"></span>
+        </label>
+        <input type="radio" name="payment" id="maestro">
+        <label for="maestro" class="payment-method maestro">Maestro
+            <span class="checkmark"></span>
+        </label>
+    </form>
+    <a class="next-step-button" href="#">Next step</a>
+</div>
+</body>
+</html>

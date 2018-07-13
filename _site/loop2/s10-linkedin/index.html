@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loop 2 - Challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="content header">
+        <div class="header--component">
+            <img class="header--logo" src="img/logo.png">
+        </div>
+        <div class="header--component">
+            <div class="header--search">
+                <input class="header--search-bar" placeholder="Search">
+                <i class="material-icons header--search-icon">search</i>
+            </div>
+        </div>
+        <div class="header--component">
+            <a class="header--menu-item header--link" href="#">Home</a>
+            <a class="header--menu-item header--link" href="#">Profile</a>
+            <a class="header--menu-item header--link" href="#">Connections</a>
+            <a class="header--menu-item header--link" href="#">Interest</a>
+            <a class="header--menu-item header--link highlighted" href="#">Try
+                Premium</a>
+        </div>
+        <div class="header--component actions">
+            <a class="header--link comment" href="#">
+                <i class="material-icons">comment</i>
+            </a>
+            <a class="header--link alert" href="#">
+                <i class="material-icons">notifications</i>
+            </a>
+            <a class="header--link add" href="#">
+                <i class="material-icons">person_add</i>
+            </a>
+        </div>
+        <div class="header--component">
+            <img class="avatar small" src="img/avatar.jpg">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content navigation">
+        <a class="nav--item current" href="#posts">Posts</a>
+        <a class="nav--item" href="#background">Background</a>
+        <a class="nav--item" href="#recommendations">Recommendations</a>
+        <a class="nav--item" href="#following">Following</a>
+    </div>
+</div>
+<div class="container main">
+    <div class="content">
+        <div class="block profile">
+            <div class="profile--box profile--header">
+                <img class="avatar big" src="img/bill-gates-avatar.png">
+                <div class="profile--title">
+                    Bill Gates
+                </div>
+                <div class="profile--subtitle">
+                    Microsoft Founder
+                </div>
+                <div class="profile--subtitle disabled">
+                    Greater Seattle Area
+                </div>
+                <button class="button default-button filled">
+                    Follow
+                </button>
+                <button class="button default-button">
+                    Connect <i class="material-icons button--icon">keyboard_arrow_down</i>
+                </button>
+            </div>
+            <div class="profile--section separated splitted">
+                <div class="profile--box splitted">
+                    <div class="stats--value">200</div>
+                    <div class="stats--title">connections</div>
+                </div>
+                <div class="profile--box splitted">
+                    <div class="stats--value">1.9M</div>
+                    <div class="stats--title">followers</div>
+                </div>
+            </div>
+            <div class="profile--section profile--box separated">
+                <div class="profile--link-wrapper">
+                    <i class="material-icons profile--link-icon">link</i>
+                    <a class="profile--link"
+                       href="https://www.linkedin.com/in/williamhgates">
+                        linkedin.com/in/williamhgates
+                    </a>
+                </div>
+                <div class="profile--link-wrapper">
+                    <i class="material-icons profile--link-icon">language</i>
+                    <a class="profile--link"
+                       href="https://www.gatesnotes.com/">
+                        gatesnotes.com
+                    </a>
+                </div>
+            </div>
+            <div class="profile--section profile--box separated">
+                <i class="material-icons profile--link-icon">file_upload</i>
+                <a class="profile--link" href="#">
+                    Export page as PDF
+                </a>
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="block" id="posts">
+                <div class="block--header">
+                    <div class="block--title">
+                        Posts
+                    </div>
+                    <div>
+                        <button class="button nav-button">
+                            <i class="material-icons button--icon">keyboard_arrow_left</i>
+                        </button>
+                        <button class="button nav-button">
+                            <i class="material-icons button--icon">keyboard_arrow_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="block--content flex three">
+                    <a class="block--item post" href="#">
+                        <img class="post--image" src="img/article1.jpg">
+                        <div class="post--title">
+                            3 Myths That Confuse Top-Managers
+                        </div>
+                        <div class="post--date">
+                            February 19, 2016
+                        </div>
+                    </a>
+                    <a class="block--item post" href="#">
+                        <img class="post--image" src="img/article2.jpg">
+                        <div class="post--title">
+                            How much do we spend on hot drinks
+                        </div>
+                        <div class="post--date">
+                            February 19, 2016
+                        </div>
+                    </a>
+                    <a class="block--item post" href="#">
+                        <img class="post--image" src="img/article3.jpg">
+                        <div class="post--title">
+                            Good new you might have noticed
+                        </div>
+                        <div class="post--date">
+                            February 19, 2016
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="block" id="background">
+                <div class="block--header">
+                    <div class="block--title">
+                        Background
+                    </div>
+                </div>
+
+                <div class="block--content">
+                    <div class="block--item section">
+                        <div class="block--item-title">
+                            <i class="material-icons block--item-icon">assignment</i>
+                            Summary
+                        </div>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Praesent sit amet lacinia dui. Nullam
+                            hendrerit ornare porta. Aliquam a odio tempus,
+                            dictum nulla eu, ultricies metus. In id lorem nibh.
+                            Nam a justo imperdiet, hendrerit orci non,
+                            condimentum nibh. Curabitur eget felis tincidunt,
+                            placerat urna non, luctus velit. Suspendisse feugiat
+                            dui justo, vel feugiat justo efficitur vitae.
+                            Phasellus lectus mi, lobortis quis leo id, ultrices
+                            efficitur diam. Sed ac odio bibendum, cursus eros
+                            nec, placerat urna.
+                        </div>
+                    </div>
+
+                    <div class="block--item section">
+                        <div class="block--item-title">
+                            <i class="material-icons block--item-icon">work</i>
+                            Experience
+                        </div>
+                        <div class="block--item-cv">
+                            <div class="item--cv-date">
+                                2000 - Present
+                            </div>
+                            <div class="item--cv-title">
+                                Co-founder, Chairman
+                            </div>
+                            <a class="link"
+                               href="https://www.microsoft.com/">
+                                Microsoft
+                            </a>
+                        </div>
+                        <div class="block--item-cv">
+                            <div class="item--cv-date">
+                                1992 - 1999
+                            </div>
+                            <div class="item--cv-title">
+                                Senior Developer
+                            </div>
+                            <a class="link"
+                               href="https://www.youtube.com/">
+                                YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="block--item section">
+                        <div class="block--item-title">
+                            <i class="material-icons block--item-icon">account_balance</i>
+                            Education
+                        </div>
+                        <div class="block--item-cv">
+                            <div class="item--cv-date">
+                                1973 - 1975
+                            </div>
+                            <div class="item--cv-title">
+                                Harvard University
+                            </div>
+                            <a class="link" href="#">
+                                BS Computer Science
+                            </a>
+                        </div>
+                        <div class="block--item-cv">
+                            <div class="item--cv-date">
+                                1960 - 1973
+                            </div>
+                            <div class="item--cv-title">
+                                Lakeside School, Seattle
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block--item section">
+                        <div class="block--item-title">
+                            <i class="material-icons block--item-icon">lightbulb_outline</i>
+                            Skills
+                        </div>
+                        <div class="block--item-skills">
+                            <div class="item--skills-text">
+                                <div class="item--skills-score">
+                                    74
+                                </div>
+                                <div class="item--skills-title">
+                                    Social Media Marketing
+                                </div>
+                            </div>
+                            <div class="item--skills-avatars">
+                                <img class="avatar small"
+                                     src="img/avatar.jpg">
+                                <img class="avatar small"
+                                     src="img/jeffrey-bezos.jpg">
+                                <img class="avatar small"
+                                     src="img/tim-cook.jpg">
+                                <div class="avatar small number">71+</div>
+                            </div>
+                        </div>
+                        <div class="block--item-skills">
+                            <div class="item--skills-text">
+                                <div class="item--skills-score">
+                                    67
+                                </div>
+                                <div class="item--skills-title">
+                                    Web Development
+                                </div>
+                            </div>
+                            <div class="item--skills-avatars">
+                                <img class="avatar small"
+                                     src="img/sergey-brin.jpg">
+                                <img class="avatar small"
+                                     src="img/tim-cook.jpg">
+                                <img class="avatar small"
+                                     src="img/avatar.jpg">
+                                <div class="avatar small number">17+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block--item section">
+                        <div class="block--item-title">
+                            <i class="material-icons block--item-icon">star_rate</i>
+                            Interests
+                        </div>
+                        <div class="block--item-tags">
+                            <div class="tag">Wireless Industry</div>
+                            <div class="tag">Photography</div>
+                            <div class="tag">Web design</div>
+                            <div class="tag">Technology</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block" id="recommendations">
+                <div class="block--header">
+                    <div class="block--title">
+                        Recommendations
+                    </div>
+                    <div>
+                        <button class="button nav-button">
+                            <i class="material-icons button--icon">keyboard_arrow_left</i>
+                        </button>
+                        <button class="button nav-button">
+                            <i class="material-icons button--icon">keyboard_arrow_right</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="block--content flex three">
+                    <div class="block--item">
+                        <div class="recommendation--comment">
+                            Sed eget fermentum dolor. Sed at tellus sit amet
+                            eros tristique volutpat. Nulla facilisi.
+                            Pellentesque habitant morbi tristique senectus et
+                            netus et malesuada fames ac turpis egestas.
+                        </div>
+                        <div class="author-badge">
+                            <img class="avatar small" src="img/tim-cook.jpg">
+                            <div class="author-badge--info">
+                                <div class="author-badge--name">
+                                    Tim Cook
+                                </div>
+                                <div class="author-badge--company">
+                                    Apple
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block--item block--recommendation">
+                        <div class="recommendation--comment">
+                            Donec scelerisque justo sed orci malesuada, in
+                            egestas justo tincidunt. Morbi vitae risus
+                            venenatis, ultrices nunc ac, viverra felis.
+                        </div>
+                        <div class="author-badge">
+                            <img class="avatar small"
+                                 src="img/mark-zuckerberg.jpg">
+                            <div class="author-badge--info">
+                                <div class="author-badge--name">
+                                    Mark Zuckerberg
+                                </div>
+                                <div class="author-badge--company">
+                                    Facebook
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block--item block--recommendation">
+                        <div class="recommendation--comment">
+                            Vestibulum malesuada eros massa, id porta justo
+                            semper sed. Praesent posuere, erat eu maximus
+                            porttitor, leo felis fringilla magna, non
+                            sollicitudin.
+                        </div>
+                        <div class="author-badge">
+                            <img class="avatar small"
+                                 src="img/jeffrey-bezos.jpg">
+                            <div class="author-badge--info">
+                                <div class="author-badge--name">
+                                    Jeffrey Bezos
+                                </div>
+                                <div class="author-badge--company">
+                                    Amazon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block" id="following">
+                <div class="block--header">
+                    <div class="block--title">
+                        Following
+                    </div>
+                </div>
+
+                <div class="block--content flex four">
+                    <div class="block--item">
+                        <div class="item--image">
+                            <img class="brand-logo"
+                                 src="img/logo-microsoft.png">
+                        </div>
+                        <div class="item--image-title">
+                            Microsoft
+                        </div>
+                        <a class="link" href="#">
+                            <span class="plus-icon">+</span>Follow
+                        </a>
+                    </div>
+                    <div class="block--item">
+                        <div class="item--image">
+                            <img class="brand-logo"
+                                 src="img/logo-amazon.jpg">
+                        </div>
+                        <div class="item--image-title">
+                            Amazon
+                        </div>
+                        <a class="link" href="#">
+                            <span class="plus-icon">+</span>Follow
+                        </a>
+                    </div>
+                    <div class="block--item">
+                        <div class="item--image">
+                            <img class="brand-logo"
+                                 src="img/logo-apple.png">
+                        </div>
+                        <div class="item--image-title">
+                            Apple
+                        </div>
+                        <a class="link" href="#">
+                            <span class="plus-icon">+</span>Follow
+                        </a>
+                    </div>
+                    <div class="block--item">
+                        <div class="item--image">
+                            <img class="brand-logo"
+                                 src="img/logo-google.png">
+                        </div>
+                        <div class="item--image-title">
+                            Google
+                        </div>
+                        <a class="link" href="#">
+                            <span class="plus-icon">+</span>Follow
+                        </a>
+                    </div>
+                </div>
+
+                <button class="button default-button center">
+                    See all (20)
+                </button>
+            </div>
+        </div>
+
+        <div class="aside">
+            <div class="aside--section">
+                <div class="aside--section-title">
+                    People also viewed
+                </div>
+                <div class="author-badge">
+                    <img class="avatar small"
+                         src="img/sergey-brin.jpg">
+                    <div class="author-badge--info">
+                        <div class="author-badge--name">
+                            Sergey Brin
+                        </div>
+                        <div class="author-badge--company">
+                            Google
+                        </div>
+                    </div>
+                </div>
+                <div class="author-badge">
+                    <img class="avatar small"
+                         src="img/jeffrey-bezos.jpg">
+                    <div class="author-badge--info">
+                        <div class="author-badge--name">
+                            Jeffrey Bezos
+                        </div>
+                        <div class="author-badge--company">
+                            Amazon
+                        </div>
+                    </div>
+                </div>
+                <div class="author-badge">
+                    <img class="avatar small"
+                         src="img/tim-cook.jpg">
+                    <div class="author-badge--info">
+                        <div class="author-badge--name">
+                            Tim Cook
+                        </div>
+                        <div class="author-badge--company">
+                            Apple
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside--section">
+                <div class="aside--section-title">
+                    More influencers
+                </div>
+                <div class="aside--influencer">
+                    <div class="influencer--avatar">
+                        <i class="material-icons influencer--icon">keyboard_arrow_left</i>
+                        <img class="avatar big" src="img/tim-cook.jpg">
+                        <i class="material-icons influencer--icon">keyboard_arrow_right</i>
+                    </div>
+                    <div class="influencer--name">Tim Cook</div>
+                    <div class="influencer--company">Apple</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="content">
+        <ul>
+            <li>
+                LinkedIn Corporation &copy; 2014
+            </li>
+            <li>
+                <a class="link"
+                   href="https://github.com/Glascode/front-loops/tree/master/loop2/s10-linkedin">
+                    View source
+                </a>
+            </li>
+            <li>
+                <a class="link"
+                   href="https://glascode.github.io/front-loops/">
+                    Resolutions
+                </a>
+            </li>
+            <li>
+                <a class="link"
+                   href="https://frontloops.io/">
+                    FrontLoops
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

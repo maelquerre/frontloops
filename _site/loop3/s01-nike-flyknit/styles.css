@@ -1,0 +1,269 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background: #4D33E2;
+}
+
+.container {
+    width: 900px;
+    margin: 100px auto;
+}
+
+.frame {
+    display: flex;
+    border-radius: 5px;
+}
+
+.image {
+    width: 100%;
+}
+
+.side,
+.card {
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, .3);
+}
+
+.side {
+    width: 40%;
+    position: relative;
+    background: #DF6894;
+    border-radius: inherit;
+    transform: scale(1.1);
+}
+
+.side--logo {
+    width: 40px;
+    margin: 20px;
+}
+
+.side--number {
+    margin-bottom: 1em;
+    text-align: center;
+    line-height: .8em;
+    font-size: 18em;
+    font-weight: 500;
+    color: #E789A9;
+}
+
+.side--preview {
+    position: absolute;
+    top: 160px;
+    left: -100px;
+    width: 400px;
+}
+
+.preview-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 29px;
+    height: 29px;
+    color: white;
+    background: #5737EE;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .15s;
+}
+
+.preview-button:hover {
+    opacity: .9;
+}
+
+.preview-button.heel {
+    top: 60px;
+    left: 100px;
+}
+
+.preview-button.midsole {
+    top: 180px;
+    left: 170px;
+}
+
+.preview-button.uppers {
+    top: 220px;
+    left: 310px;
+}
+
+.side--dots-container {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+}
+
+.side--dots {
+    margin-left: -50%;
+}
+
+.side--dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    opacity: .7;
+    transition: opacity .15s;
+    cursor: pointer;
+}
+
+.side--dot.selected,
+.side--dot:hover {
+    opacity: 1;
+}
+
+.card {
+    width: 60%;
+    padding: 4em;
+    background: white;
+    border-radius: inherit;
+}
+
+.card--title {
+    margin-bottom: .2em;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.card--subtitle {
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.small {
+    margin-left: 1em;
+    font-size: .6em;
+    color: darkgray;
+}
+
+.card--paragraph {
+    font-weight: 300;
+    margin-bottom: 3em;
+}
+
+.card--choices-table {
+    display: table;
+    width: 100%;
+    margin-bottom: 3em;
+    font-size: 1.3em;
+}
+
+.row {
+    display: table-row;
+}
+
+.col {
+    display: table-cell;
+}
+
+.card--choice {
+    color: darkgray;
+}
+
+.choice--values {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.value {
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+.checkmark {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.checkmark:hover {
+    color: black;
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #DF6894;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform .15s;
+}
+
+input:checked ~ .checkmark {
+    color: #DF6894;
+}
+
+input:checked ~ .checkmark::after {
+    transform: scale(1.8);
+}
+
+.amount {
+    color: black;
+}
+
+.amount::before,
+.amount::after {
+    --arrow-size: .3em;
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    vertical-align: middle;
+    transition: opacity .15s;
+    cursor: pointer;
+}
+
+.amount::before:hover,
+.amount::after:hover {
+    opacity: .7;
+}
+
+.amount::before {
+    margin-right: var(--arrow-size);
+    border-width: var(--arrow-size) var(--arrow-size) var(--arrow-size) 0;
+    border-color: transparent #DF6894 transparent transparent;
+}
+
+.amount::after {
+    margin-left: var(--arrow-size);
+    border-width: var(--arrow-size) 0 var(--arrow-size) var(--arrow-size);
+    border-color: transparent transparent transparent #DF6894;
+}
+
+.card--button {
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: .8em 4em;
+    text-transform: uppercase;
+    color: white;
+    background: #E44C40;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 20px rgba(228, 76, 64, .7);
+    cursor: pointer;
+    outline: none;
+    transition: transform .15s;
+}
+
+.card--button:focus,
+.card--button:hover {
+    transform: translateY(-3px);
+}

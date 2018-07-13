@@ -1,0 +1,195 @@
+html {
+    --line-color: #DEDEDE;
+    --main-color: #6D97D6;
+    --sender-color: #E7EEF6;
+    --receiver-color: #F2F2F2;
+    --alert-color: #FDC2C2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    background: linear-gradient(to bottom, #CDDCE8, #92AFC8);
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 500px;
+    margin: 100px auto;
+}
+
+.frame {
+    background-color: white;
+}
+
+.frame--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    color: white;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.frame--header-title {
+    position: relative;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.frame--header-title::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 1em;
+    margin-bottom: .1em;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("img/close.svg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    opacity: 0.7;
+    transition: .2s;
+}
+
+.close:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.frame--content {
+    padding: 1em 2em;
+}
+
+.date {
+    display: flex;
+    color: gainsboro;
+    line-height: 0.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.date--text {
+    margin: 0 1em;
+}
+
+.date--line {
+    margin-top: .2em;
+    width: 100%;
+    height: 1px;
+    background-color: var(--line-color);
+}
+
+.block {
+    margin-top: 1.5em;
+    padding: .8em;
+    max-width: 70%;
+}
+
+.block p {
+    margin: 0;
+}
+
+.block.sender {
+    margin-left: auto;
+    border-radius: 5px 0 5px 5px;
+}
+
+.block.receiver {
+    border-radius: 0 5px 5px;
+}
+
+.message {
+    position: relative;
+    margin-top: 3em;
+}
+
+.message::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    --triangle-size: 7px;
+}
+
+.message.sender::after {
+    right: calc(var(--triangle-size) * -1);
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+    border-color: var(--sender-color) transparent transparent transparent;
+}
+
+.message.receiver::after {
+    left: calc(var(--triangle-size) * -1);
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
+    border-color: transparent var(--receiver-color) transparent transparent;
+}
+
+.message.sender {
+    background-color: var(--sender-color);
+}
+
+.message.receiver {
+    background-color: var(--receiver-color);
+}
+
+.message--date {
+    position: absolute;
+    top: -1.5em;
+    color: darkgray;
+}
+
+.sender .message--date {
+    right: 0;
+}
+
+.receiver .message--date {
+    left: 0;
+}
+
+.alert {
+    background-color: var(--alert-color);
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    padding: 1em 0;
+    border-top: 1px solid var(--line-color);
+}
+
+.input--message,
+.input--send {
+    font-size: 1em;
+    outline: none;
+}
+
+.input--message {
+    border: none;
+}
+
+.input--send {
+    padding: 0;
+    background: none;
+    font-weight: bold;
+    color: var(--main-color);
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
