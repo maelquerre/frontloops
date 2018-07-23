@@ -86,7 +86,7 @@ h1, h2, h3 {
 .nav-link {
     padding: .5em .8em;
     border-radius: 4px;
-    transition: color .2s, background-color .2s;
+    transition: color .1s, background-color .1s;
 }
 
 .nav-link:hover {
@@ -129,7 +129,7 @@ h1, h2, h3 {
     text-decoration: none;
     overflow: hidden;
     z-index: 1;
-    background-color: black;
+    background-color: #eee;
     box-shadow: 0 0 3px rgba(0, 0, 0, .2);
 }
 
