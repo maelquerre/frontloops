@@ -95,11 +95,11 @@ body {
     width: 100%;
 }
 
-.loop-item {
+.item {
     line-height: 2.5;
 }
 
-.item-title {
+.item--title {
     color: dimgrey;
 }
 
