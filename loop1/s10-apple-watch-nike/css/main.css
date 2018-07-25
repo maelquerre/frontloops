@@ -11,9 +11,10 @@ html {
 
 body {
     margin: 0;
-    font-family: Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
-    color: #333333;
+    color: #111;
 }
 
 .section {
@@ -70,7 +71,7 @@ body {
 
 .nav--item:hover {
     border-color: gray;
-    color: black;
+    color: #111;
 }
 
 .nav--help {
@@ -82,7 +83,7 @@ body {
 }
 
 .nav--help:focus {
-    border-color: black;
+    border-color: #111;
 }
 
 .block.right {
@@ -104,17 +105,14 @@ img {
 }
 
 .content--title {
-    margin-bottom: 1em;
-    font-size: 3em;
-    font-weight: bold;
+    margin-bottom: .8em;
+    font-size: 3.5em;
+    font-weight: 600;
 }
 
 .content--quote {
     margin-bottom: 4em;
-    padding-left: 2em;
     line-height: 1.6;
-    color: darkgray;
-    border-left: 2px solid gray;
 }
 
 .descriptions {
@@ -128,14 +126,15 @@ img {
 }
 
 .description--title {
-    margin-bottom: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 .description-text {
     position: relative;
     line-height: 1.9;
+    margin-bottom: 1em;
 }
 
 .description-text.more::after {
@@ -149,8 +148,6 @@ img {
 }
 
 .learn-more {
-    font-weight: bold;
-    text-transform: uppercase;
     text-decoration: none;
     color: var(--custom-red);
 }
@@ -182,9 +179,9 @@ img {
 .button {
     padding: .8em 1.5em;
     text-decoration: none;
-    text-transform: uppercase;
     color: white;
     background-color: var(--custom-red);
+    border-radius: 2px;
     transition: background .2s;
 }
 
