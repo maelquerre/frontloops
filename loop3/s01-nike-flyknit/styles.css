@@ -11,36 +11,54 @@ body {
     font-size: 14px;
 }
 
-.container {
-    width: 900px;
-    margin: 100px auto;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.frame {
+.site-logo {
+    width: 60px;
+}
+
+.nav-list {
     display: flex;
-    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 0 1em;
+}
+
+.nav-link {
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    letter-spacing: .5px;
+}
+
+.content {
+    display: flex;
+    padding: 50px 100px;
 }
 
 .image {
     width: 100%;
 }
 
-.side,
-.card {
-    box-shadow: 10px 10px 50px rgba(0, 0, 0, .3);
-}
-
 .side {
     width: 40%;
     position: relative;
-    background: #DF6894;
-    border-radius: inherit;
-    transform: scale(1.1);
-}
-
-.side--logo {
-    width: 40px;
-    margin: 20px;
+    background: #f7f7f7;
+    border-radius: 2px;
 }
 
 .side--number {
@@ -49,7 +67,7 @@ body {
     line-height: .8em;
     font-size: 18em;
     font-weight: 500;
-    color: #E789A9;
+    color: #EA4035;
 }
 
 .side--preview {
@@ -121,152 +139,105 @@ body {
 
 .card {
     width: 60%;
-    padding: 4em;
+    padding: 0 5%;
     background: white;
     border-radius: inherit;
 }
 
-.card--title {
-    margin-bottom: .2em;
-    font-family: Oswald, sans-serif;
-    font-size: 2.5em;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.card--subtitle {
-    margin-bottom: 1.5em;
+.shoe-info {
     display: flex;
     align-items: center;
-    font-size: 1.4em;
-}
-
-.small {
-    margin-left: 1em;
-    font-size: .6em;
-    color: darkgray;
-    text-decoration: line-through;
-}
-
-.card--paragraph {
-    line-height: 1.5em;
-    margin-bottom: 3em;
-}
-
-.card--choices-table {
-    display: table;
-    width: 100%;
-    margin-bottom: 3em;
-    font-size: 1.3em;
-}
-
-.row {
-    display: table-row;
-}
-
-.col {
-    display: table-cell;
-}
-
-.card--choice {
-    color: darkgray;
-}
-
-.choice--values {
-    display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
 }
 
-.value {
-    position: relative;
+.shoe-type,
+.shoe-price {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0;
 }
 
-input {
+.shoe-price {
+    right: 0;
+}
+
+.shoe-name {
+    margin-bottom: .2em;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.shoe-description {
+    line-height: 1.5em;
+    margin-bottom: 3em;
+}
+
+/* Sizes section */
+
+.sizes-section {
+    margin-bottom: 50px;
+}
+
+.sizes-title {
+    margin-bottom: 1em;
+    font-family: Oswald, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sizes-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1em;
+    grid-gap: 1px;
+}
+
+.value {
+    display: inline-flex;
+}
+
+.sizes-table input {
     display: none;
 }
 
 .checkmark {
-    font-weight: 300;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
     cursor: pointer;
+    box-shadow: 0 0 0 1px #e5e5e5;
+    border: 1px solid transparent;
 }
 
 .checkmark:hover {
-    color: black;
-}
-
-.checkmark::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #DF6894;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform .15s;
+    border-color: #111;
 }
 
 input:checked ~ .checkmark {
-    color: #DF6894;
+    color: white;
+    background-color: #111;
+    border-color: #111;
 }
 
-input:checked ~ .checkmark::after {
-    transform: scale(1.8);
-}
-
-.amount {
-    color: black;
-}
-
-.amount::before,
-.amount::after {
-    --arrow-size: .3em;
-    display: inline-block;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    vertical-align: middle;
-    transition: opacity .15s;
-    cursor: pointer;
-}
-
-.amount::before:hover,
-.amount::after:hover {
-    opacity: .7;
-}
-
-.amount::before {
-    margin-right: var(--arrow-size);
-    border-width: var(--arrow-size) var(--arrow-size) var(--arrow-size) 0;
-    border-color: transparent #DF6894 transparent transparent;
-}
-
-.amount::after {
-    margin-left: var(--arrow-size);
-    border-width: var(--arrow-size) 0 var(--arrow-size) var(--arrow-size);
-    border-color: transparent transparent transparent #DF6894;
-}
 
 .card--button {
-    font-size: 1.5em;
-    font-weight: 500;
+    font-family: Oswald, sans-serif;
+    font-size: 1em;
     padding: .8em 4em;
     text-transform: uppercase;
     color: white;
-    background: #E44C40;
+    background-color: #111;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     letter-spacing: 1px;
-    box-shadow: 5px 5px 20px rgba(228, 76, 64, .7);
     cursor: pointer;
     outline: none;
-    transition: transform .15s;
+    transition: background-color .15s;
 }
 
 .card--button:focus,
 .card--button:hover {
-    transform: translateY(-3px);
+    background-color: #333;
 }

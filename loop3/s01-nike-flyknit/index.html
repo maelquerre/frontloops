@@ -12,98 +12,130 @@
     <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
-<div class="container">
-    <div class="frame">
-        <div class="side">
-            <div class="side--logo">
-                <img class="image logo" src="img/logo.png">
-            </div>
+<header class="header">
+    <div class="site-logo">
+        <img class="image" src="img/logo.png">
+    </div>
 
-            <div class="side--number">
-                39
-            </div>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kids</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Customise</a>
+            </li>
+        </ul>
+    </nav>
 
-            <div class="side--preview">
-                <img class="image" src="img/preview.png">
-                <div class="preview-button heel">+</div>
-                <div class="preview-button midsole">+</div>
-                <div class="preview-button uppers">+</div>
-            </div>
+    <input type="text" placeholder="Search">
+</header>
+<div class="content">
+    <div class="side">
+        <div class="side--number">19</div>
 
-            <div class="side--dots-container">
-                <div class="side--dots">
-                    <span class="side--dot"></span>
-                    <span class="side--dot selected"></span>
-                    <span class="side--dot"></span>
-                </div>
-            </div>
+        <div class="side--preview">
+            <img class="image" src="img/preview.png">
+            <div class="preview-button heel">+</div>
+            <div class="preview-button midsole">+</div>
+            <div class="preview-button uppers">+</div>
         </div>
 
-        <div class="card">
-            <div class="card--title">
-                Nike Flyknit
+        <div class="side--dots-container">
+            <div class="side--dots">
+                <span class="side--dot"></span>
+                <span class="side--dot selected"></span>
+                <span class="side--dot"></span>
             </div>
-
-            <div class="card--subtitle">
-                $189.00 <span class="small">$259.00</span>
-            </div>
-
-            <div class="card--paragraph">
-                With a flexible Flyknit upper placed directly on top of
-                radically
-                reinvented Air cushioning system, The Nike Air VaporMax defies
-                conventional style and provides an unbelievably light, bouncy
-                and
-                flexible feel.
-            </div>
-
-            <div class="card--choices-table">
-                <div class="row card--choice">
-                    <div class="col choice--title">
-                        Size
-                    </div>
-                    <div class="col">
-                        <div class="choice--values">
-                            <label class="value">
-                                <input type="radio" name="size">
-                                <span class="checkmark">39</span>
-                            </label>
-                            <label class="value">
-                                <input type="radio" name="size">
-                                <span class="checkmark">40</span>
-                            </label>
-                            <label class="value">
-                                <input type="radio" name="size">
-                                <span class="checkmark">41</span>
-                            </label>
-                            <label class="value">
-                                <input type="radio" name="size">
-                                <span class="checkmark">42</span>
-                            </label>
-                            <label class="value">
-                                <input type="radio" name="size">
-                                <span class="checkmark">43</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row card--choice">
-                    <div class="col choice--title">
-                        Amount
-                    </div>
-                    <div class="col">
-                        <div class="amount">
-                            2
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="card--button">
-                Buy now
-            </button>
         </div>
+    </div>
+
+    <div class="card">
+        <div class="shoe-info">
+            <h2 class="shoe-type">Men's Running Shoe</h2>
+            <span class="shoe-price">£105</span>
+        </div>
+
+        <div class="shoe-name">Nike Air Zoom Structure 19</div>
+
+        <div class="shoe-description">
+            With a flexible Flyknit upper placed directly on top of
+            radically
+            reinvented Air cushioning system, The Nike Air VaporMax defies
+            conventional style and provides an unbelievably light, bouncy
+            and
+            flexible feel.
+        </div>
+
+        <div class="sizes-section">
+            <div class="sizes-title">Size</div>
+
+            <form class="sizes-table">
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 39</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 40</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 40.5</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 41</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 42</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 42.5</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 43</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 44</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 44.5</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 45</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 45.5</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 46</span>
+                </label>
+                <label class="value">
+                    <input type="radio" name="size">
+                    <span class="checkmark">EU 47</span>
+                </label>
+            </form>
+        </div>
+
+        <button type="submit" class="card--button">Add to cart</button>
     </div>
 </div>
 </body>
