@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 body {
@@ -35,20 +35,12 @@ img[data-src] {
     opacity: 0;
 }
 
-h1, h2, h3 {
-    font-size: 1em;
+.loop-heading {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-left: 2.5%;
 }
-
-/*h1 {*/
-    /*font-size: 96px;*/
-    /*font-weight: 300;*/
-/*}*/
-
-/*h2 {*/
-    /*font-size: 60px;*/
-    /*font-weight: 300;*/
-    /*letter-spacing: -0.5px;*/
-/*}*/
 
 /* Header */
 
@@ -57,14 +49,14 @@ h1, h2, h3 {
     top: 0;
     width: 100%;
     color: #fff;
-    background-color: #222;
+    background-color: #202124;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
     z-index: 10;
 }
 
 .header-inner {
     max-width: 500px;
     margin: auto;
-    padding: 2em;
 }
 
 .header-logo {
@@ -89,14 +81,34 @@ h1, h2, h3 {
 }
 
 .nav-link {
-    border-radius: 4px;
-    transition: opacity .2s;
+    position: relative;
+    display: block;
+    padding: 1em 0;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transform: translateY(4px);
+    transition: transform .2s;
+    z-index: 5;
 }
 
 .nav-link:hover,
 .nav-link.current {
-    opacity: .6;
     text-decoration: none;
+}
+
+.nav-link:hover::after,
+.nav-link.current::after {
+    transform: translateY(0);
 }
 
 /* Content */
@@ -126,6 +138,7 @@ h1, h2, h3 {
     overflow: hidden;
     z-index: 1;
     background-color: #eee;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
 }
 
 .item-title {
@@ -150,7 +163,7 @@ h1, h2, h3 {
     height: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .loop-title {
         font-size: 3em;
     }
@@ -158,6 +171,10 @@ h1, h2, h3 {
     .loop-item {
         width: 100%;
         margin-bottom: 4%;
+    }
+
+    .loop-heading {
+        margin-left: 1em;
     }
 }
 
@@ -170,8 +187,6 @@ h1, h2, h3 {
     margin: 40px auto 0;
     padding: 40px 0;
     max-width: 980px;
-    font-size: 0.9em;
-    font-weight: 300;
     color: #586069;
     border-top: 1px solid #e1e4e8;
 }

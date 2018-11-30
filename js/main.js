@@ -13,14 +13,14 @@ function addLoopItems() {
             let src = 'images/l' + loop + 's' + step + '.jpg';
             $link = $(this).find('a');
             $link.append("<img class='loop-image' data-src='" + src + "'>");
-
-            [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
-                img.setAttribute('src', img.getAttribute('data-src'));
-                img.onload = function () {
-                    img.removeAttribute('data-src');
-                };
-            });
         });
+    });
+
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function () {
+            img.removeAttribute('data-src');
+        };
     });
 }
 
