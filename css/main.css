@@ -39,6 +39,17 @@ h1, h2, h3 {
     font-size: 1em;
 }
 
+/*h1 {*/
+    /*font-size: 96px;*/
+    /*font-weight: 300;*/
+/*}*/
+
+/*h2 {*/
+    /*font-size: 60px;*/
+    /*font-weight: 300;*/
+    /*letter-spacing: -0.5px;*/
+/*}*/
+
 /* Header */
 
 .header {

@@ -1,0 +1,10 @@
+# Site settings
+title: "FrontLoops resolutions"
+description: "My Frontloops resolutions."
+baseurl: "/front-loops"
+url: "http://localhost:4000"  # absolute url
+
+# Build settings
+include: ["_pages"]  # include more files
+kramdown:
+  input: GFM
