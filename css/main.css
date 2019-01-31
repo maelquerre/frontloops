@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,10 +13,13 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'Roboto Mono', Roboto, sans-serif;
     color: #111;
-    background-color: #f2f2f2;
     line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 a {
@@ -33,13 +38,6 @@ img {
 
 img[data-src] {
     opacity: 0;
-}
-
-.loop-heading {
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: -0.5px;
-    margin-left: 2.5%;
 }
 
 /* Header */
@@ -85,6 +83,7 @@ img[data-src] {
     display: block;
     padding: 1em 0;
     font-size: 20px;
+    text-transform: uppercase;
     overflow: hidden;
 }
 
@@ -113,11 +112,10 @@ img[data-src] {
 
 /* Content */
 
-.loop-title {
-    padding: 1rem 0;
-    font-size: 5em;
-    font-weight: 600;
-    text-align: center;
+.loop-heading {
+    margin-left: 2.5%;
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 .loop-items {
@@ -164,10 +162,6 @@ img[data-src] {
 }
 
 @media screen and (max-width: 900px) {
-    .loop-title {
-        font-size: 3em;
-    }
-
     .loop-item {
         width: 100%;
         margin-bottom: 4%;
@@ -199,15 +193,15 @@ img[data-src] {
 }
 
 .footer-item {
-    padding: 0 1em;
+    margin: 0 2rem;
 }
 
 .footer-item:first-child {
-    padding-left: 0;
+    margin-left: 0;
 }
 
 .footer-item:last-child {
-    padding-right: 0;
+    margin-right: 0;
 }
 
 .footer-icon {
