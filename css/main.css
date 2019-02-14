@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700');
 
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
@@ -7,19 +7,20 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Mono', Roboto, sans-serif;
+    font-weight: 300;
     color: #111;
     line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -53,14 +54,12 @@ img[data-src] {
 }
 
 .header-inner {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
 .header-logo {
-    margin-right: .5em;
-    width: 1.3em;
-    vertical-align: text-bottom;
+    width: 1.3rem;
 }
 
 /* Navigation */
@@ -68,23 +67,19 @@ img[data-src] {
 .nav-list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.nav-item {
-    padding: 0 .5em;
 }
 
 .nav-link {
     position: relative;
     display: block;
     padding: 1em 0;
-    font-size: 20px;
-    text-transform: uppercase;
     overflow: hidden;
+    font-weight: 300;
 }
 
 .nav-link::after {
@@ -93,9 +88,9 @@ img[data-src] {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #fff;
-    transform: translateY(4px);
+    transform: translateY(3px);
     transition: transform .2s;
     z-index: 5;
 }
@@ -113,9 +108,9 @@ img[data-src] {
 /* Content */
 
 .loop-heading {
-    margin-left: 2.5%;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 400;
+    text-align: center;
 }
 
 .loop-items {
@@ -131,7 +126,7 @@ img[data-src] {
     position: relative;
     margin-bottom: 3%;
     width: 46%;
-    font-size: 1.5em;
+    font-size: 1.3rem;
     text-decoration: none;
     overflow: hidden;
     z-index: 1;
@@ -165,10 +160,6 @@ img[data-src] {
     .loop-item {
         width: 100%;
         margin-bottom: 4%;
-    }
-
-    .loop-heading {
-        margin-left: 1em;
     }
 }
 

@@ -30,13 +30,12 @@ function scrollSpy() {
     let $headerHeight = $('.header').outerHeight() + 1;
 
     /* Nav links items */
-    let $navLinks = $('.nav-link');
+    let $navLinks = $('.js-nav-link');
 
     /* Anchors corresponding to nav items */
     let $anchors = $navLinks.map(function () {
         let $anchor = $($(this).attr('href'));
         if ($anchor.length) {
-            console.log($($(this).attr('href')));
             return $anchor;
         }
     });
