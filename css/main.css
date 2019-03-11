@@ -53,7 +53,7 @@ img[data-src] {
     z-index: 10;
 }
 
-.header-inner {
+.header-nav {
     max-width: 600px;
     margin: auto;
 }
@@ -97,6 +97,7 @@ img[data-src] {
 
 .nav-link:hover,
 .nav-link.current {
+    color: currentColor;
     text-decoration: none;
 }
 
@@ -168,7 +169,6 @@ img[data-src] {
 .footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 40px auto 0;
     padding: 40px 0;
     max-width: 980px;

@@ -1,199 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="FrontLoops resolutions.">
+---
+layout: default
+title: test
+---
 
-    <!-- Open Graph Protocol -->
-    <meta property="og:image"
-          content="{{ '/images/logo_alt.png' | prepend: site.baseurl }}">
-    <meta property="og:title" content="FrontLoops resolutions">
-    <meta property="og:type" content="website">
-    <meta property="og:description"
-          content="FrontLoops resolutions.">
-    <meta property="og:url"
-          content="https://glascode.github.io/front-loops/">
 
-    <title>Frontloops resolutions</title>
+<div class="content">
+    {% for loop in site.data.loops %}
+    <div class="loop" id="{{ loop.dirname }}">
+        <h2 class="loop-heading">{{ loop.title }}</h2>
 
-    <link rel="icon" type="image/png" href="images/logo_alt.png">
-
-    <link rel="stylesheet" href="css/main.css"/>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-
-<body>
-<main class="main">
-    <header class="header">
-        <div class="header-inner">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link js-nav-link" href="#loop-1">Loop&nbsp;1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-nav-link" href="#loop-2">Loop&nbsp;2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-nav-link" href="#loop-3">Loop&nbsp;3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/Glascode/frontloops">
-                            Source
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://frontloops.io">
-                            Frontloops
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="content">
-        <div class="loop" id="loop-1">
-            <h2 class="loop-heading">Loop 1</h2>
-
-            <ol class="loop-items">
-                <li class="loop-item">
-                    <a href="loop1/s01-subscription/">
-                        <span class="item-title">Step 1 - Subscription</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s02-payment/">
-                        <span class="item-title">Step 2 - Payment page</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s03-bicycle/">
-                        <span class="item-title">Step 3 - Bicycle order</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s04-messenger/">
-                        <span class="item-title">Step 4 - Messenger</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s05-flight/">
-                        <span class="item-title">
-                            Step 5 - Flight ticket
-                        </span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s06-signup/">
-                        <span class="item-title">
-                            Step 6 - Sign up page
-                        </span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s07-post/">
-                        <span class="item-title">Step 7 - Blog post</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s08-tourism/">
-                        <span class="item-title">Step 8 - Tourism page</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s09-wallets/">
-                        <span class="item-title">Step 9 - Bank accounts</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop1/s10-apple-watch-nike/">
-                    <span class="item-title">
-                        Step 10 - Apple Watch Nike
-                    </span>
-                    </a>
-                </li>
-            </ol>
-        </div>
-
-        <div class="loop" id="loop-2">
-            <h2 class="loop-heading">Loop 2</h2>
-
-            <ol class="loop-items">
-                <li class="loop-item">
-                    <a href="loop2/s01-washer/">
-                        <span class="item-title">Step 1 - Washer</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s02-account-settings/">
-                        <span class="item-title">Step 2 - Account settings</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s03-folder/">
-                        <span class="item-title">Step 3 - Folder</span>
-                    </a></li>
-                <li class="loop-item">
-                    <a href="loop2/s04-food/">
-                        <span class="item-title">Step 4 - Food</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s05-london/">
-                        <span class="item-title">Step 5 - London</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s06-calendar/">
-                        <span class="item-title">Step 6 - Calendar</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s07-press-page/">
-                        <span class="item-title">Step 7 - Press page</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s08-bank-app/">
-                        <span class="item-title">Step 8 - Bank app</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s09-google-maps/">
-                        <span class="item-title">Step 9 - Google Maps</span>
-                    </a>
-                </li>
-                <li class="loop-item">
-                    <a href="loop2/s10-linkedin/">
-                        <span class="item-title">Step 10 - Linkedin page</span>
-                    </a>
-                </li>
-            </ol>
-        </div>
-
-        <div class="loop" id="loop-3">
-            <h2 class="loop-heading">Loop 3</h2>
-
-            <ol class="loop-items">
-                <li class="loop-item">
-                    <a href="loop3/s01-nike-flyknit/">
-                        <span class="item-title">Step 1 - Nike Flyknit</span>
-                    </a>
-                </li>
-            </ol>
-        </div>
+        <ol class="loop-items">
+            {% for step in loop.steps %}
+            <li class="loop-item">
+                <a href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
+                    <span class="item-title">Step {{ forloop.index }} - {{ step.title }}</span>
+                    <img class='loop-image' src=""
+                         data-src="{{ site.baseurl }}/images/l{{ loop.number }}s{{ forloop.index }}.jpg">
+                </a>
+            </li>
+            {% endfor %}
+        </ol>
     </div>
-</main>
+    {% endfor %}
+</div>
 
-<footer class="footer">
-    Maël Querré, 2019
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
 

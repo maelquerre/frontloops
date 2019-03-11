@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="FrontLoops resolutions.">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:image"
+          content="{{ '/images/logo_alt.png' | prepend: site.baseurl }}">
+    <meta property="og:title" content="FrontLoops resolutions">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+          content="FrontLoops resolutions.">
+    <meta property="og:url"
+          content="https://glascode.github.io/front-loops/">
+
+    <title>Frontloops resolutions</title>
+
+    <link rel="icon" type="image/png" href="images/logo_alt.png">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+          integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <nav class="header-nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link js-nav-link"
+                   href="#loop1">Loop&nbsp;1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-nav-link"
+                   href="#loop2">Loop&nbsp;2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-nav-link"
+                   href="#loop3">Loop&nbsp;3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="https://github.com/Glascode/frontloops">
+                    Source
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://frontloops.io">
+                    Frontloops
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+    {{ content }}
+</main>
+<footer class="footer">
+    <div class="mr-4">Maël Querré, 2019</div>
+    <div>Generated with Jekyll</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

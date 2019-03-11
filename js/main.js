@@ -1,21 +1,4 @@
 function addLoopItems() {
-    $('.loop-items').each(function (loop) {
-        loop += 1;
-        $(this).find('.loop-item').each(function (step) {
-
-            /* Adjust step number */
-            step += 1;
-            if (step < 10) {
-                step = '0' + step;
-            }
-
-            /* Images */
-            let src = 'images/l' + loop + 's' + step + '.jpg';
-            let $link = $(this).find('a');
-            $link.append("<img class='loop-image' data-src='" + src + "'>");
-        });
-    });
-
     [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
         img.setAttribute('src', img.getAttribute('data-src'));
         img.onload = function () {
