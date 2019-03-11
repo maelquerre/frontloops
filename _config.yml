@@ -1,0 +1,10 @@
+# Site settings
+title: "Frontloops solutions"
+description: "Frontloops challenges solutions."
+baseurl: "/frontloops"
+url: "https://glascode.github.io"  # absolute url
+
+# Build settings
+include: ["_pages"]  # include more files
+kramdown:
+  input: GFM

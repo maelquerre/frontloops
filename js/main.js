@@ -11,7 +11,7 @@ function addLoopItems() {
 
             /* Images */
             let src = 'images/l' + loop + 's' + step + '.jpg';
-            $link = $(this).find('a');
+            let $link = $(this).find('a');
             $link.append("<img class='loop-image' data-src='" + src + "'>");
         });
     });
