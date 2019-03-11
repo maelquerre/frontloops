@@ -1,9 +1,10 @@
 # Site settings
-title: "Frontloops solutions"
-description: "Frontloops challenges solutions."
-baseurl: "/frontloops"
-url: "https://glascode.github.io"  # absolute url
+title:        'Frontloops solutions'
+description:  'Frontloops challenges solutions.'
+baseurl:      '/frontloops'
+url:          'https://glascode.github.io'
 
 # Build settings
+exclude:      ['solutions']
 kramdown:
-  input: GFM
+  input:      GFM

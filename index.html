@@ -6,8 +6,8 @@ title: test
 
 <div class="content">
     {% for loop in site.data.loops %}
-    <div class="loop" id="{{ loop.dirname }}">
-        <h2 class="loop-heading">{{ loop.title }}</h2>
+    <div class="loop" id="loop-{{ forloop.index }}">
+        <h2 class="loop-heading">Loop {{ forloop.index }}</h2>
 
         <ol class="loop-items">
             {% for step in loop.steps %}

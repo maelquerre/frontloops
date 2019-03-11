@@ -55,8 +55,8 @@ function scrollSpy() {
             lastId = id;
 
             /* Set or remove active class */
-            $navLinks.removeClass('current');
-            $navLinks.filter("[href='#" + id + "']").addClass('current');
+            $navLinks.removeClass('active');
+            $navLinks.filter("[href='#" + id + "']").addClass('active');
         }
     });
 }
