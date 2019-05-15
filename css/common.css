@@ -60,6 +60,8 @@ img[data-src] {
 /* Content */
 
 .loop-heading {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-size: 4rem;
     font-weight: 400;
     text-align: center;
@@ -80,10 +82,15 @@ img[data-src] {
     width: 46%;
     font-size: 1.3rem;
     text-decoration: none;
-    overflow: hidden;
     z-index: 1;
     background-color: #eee;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.loop-item a:focus {
+    display: block;
+    box-shadow: 0 0 0 .4rem rgba(38, 143, 255, .3);
+    transition: box-shadow .2s;
 }
 
 .item-title {
