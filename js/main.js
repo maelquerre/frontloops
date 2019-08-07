@@ -8,7 +8,6 @@ function addLoopItems() {
 }
 
 function scrollSpy() {
-
     let lastId;
     let $headerHeight = $('.header').outerHeight() + 1;
 
