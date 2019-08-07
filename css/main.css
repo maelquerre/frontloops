@@ -1,5 +1,4 @@
 @import url('https://rsms.me/inter/inter.css');
-@import 'custom.css';
 
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
@@ -45,6 +44,62 @@ img[data-src] {
     z-index: 10;
 }
 
+.navbar-toggler {
+    padding: 10px 0;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-light .navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler-icon {
+    position: relative;
+    display: block;
+    height: 1px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background: none;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+}
+
+.navbar-toggler-icon::before {
+    top: -4px;
+    transition: transform .15s, top .15s;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -4px;
+    transition: transform .15s, bottom .15s;
+}
+
+.navbar-light .navbar-toggler-icon::before,
+.navbar-light .navbar-toggler-icon::after {
+    background-color: #000000;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
 @media (min-width: 768px) {
     .navbar {
         padding-top: 0;
@@ -66,25 +121,29 @@ img[data-src] {
 
 /* Content */
 
+.loop-section {
+    padding: 0 2rem;
+}
+
 .loop-heading {
     padding-top: 3rem;
     margin-bottom: 3rem;
     font-size: 3rem;
     font-weight: 700;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 .loop-steps {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3rem;
     grid-column-gap: 3%;
     margin: 30px 0 0;
-    padding: 0 2rem;
+    padding: 0;
     list-style: none;
 }
 
 .loop-step {
-    margin-bottom: 3rem;
     font-size: 1.3rem;
     text-decoration: none;
     z-index: 1;
@@ -92,13 +151,17 @@ img[data-src] {
 }
 
 @media screen and (max-width: 900px) {
+    .loop-section {
+        padding: 1rem;
+    }
+
     .loop-steps {
         grid-template-columns: 1fr;
+        grid-row-gap: 1.5rem;
     }
 
     .loop-step {
         width: 100%;
-        margin-bottom: 1.5rem;
     }
 }
 
