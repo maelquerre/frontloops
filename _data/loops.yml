@@ -1,6 +1,5 @@
 - title: 'Loop 1'
   dirname: 'loop1'
-  number: '1'
   steps:
     - title: 'Subscription'
       dirname: 's01-subscription'
@@ -25,7 +24,6 @@
 
 - title: 'Loop 2'
   dirname: 'loop2'
-  number: '2'
   steps:
     - title: 'Washer'
       dirname: 's01-washer'
@@ -50,7 +48,6 @@
 
 - title: 'Loop 3'
   dirname: 'loop3'
-  number: '3'
   steps:
     - title: 'Nike Flyknit'
       dirname: 's01-nike-flyknit'

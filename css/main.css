@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 body {
@@ -16,6 +16,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
     color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -47,15 +49,11 @@ img[data-src] {
     top: 0;
     left: 0;
     right: 0;
-    font-size: .875rem;
+    border-bottom: 1px solid #ccc;
     z-index: 999;
 }
 
 /* Navbar */
-
-.navbar {
-    border-bottom: 1px solid #ccc;
-}
 
 .navbar-brand {
     font-weight: 500;
@@ -148,11 +146,15 @@ img[data-src] {
 
 @media (min-width: 768px) {
     .navbar {
+        margin: auto;
         padding: 0 2rem;
+        max-width: 1040px;
+        justify-content: center;
     }
 
     .navbar-expand-md .navbar-collapse {
         height: 100%; /* keep height when a link is clicked with toggle collapse */
+        flex-grow: 0;
     }
 
     .navbar-expand-md .navbar-nav .nav-item {
@@ -203,25 +205,6 @@ img[data-src] {
     background-color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-    .loop-section {
-        padding: 0 2rem 3rem;
-    }
-
-    .loop-section:first-of-type {
-        margin-top: 2rem;
-    }
-
-    .loop-heading {
-        margin-bottom: 3rem;
-    }
-
-    .loop-steps {
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 3rem;
-    }
-}
-
 .loop-step-link {
     display: block;
     border-radius: 7px;
@@ -258,16 +241,43 @@ img[data-src] {
     letter-spacing: -0.02em;
 }
 
+@media screen and (min-width: 768px) {
+    .loop-section {
+        margin: auto;
+        padding: 0 2rem 3rem;
+        max-width: 1040px;
+    }
+
+    .loop-section:first-of-type {
+        margin-top: 2rem;
+    }
+
+    .loop-heading {
+        margin-bottom: 3rem;
+    }
+
+    .loop-steps {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3rem;
+    }
+
+    .loop-step-caption {
+        font-size: 1.8rem;
+        letter-spacing: -0.03em;
+    }
+}
+
 /* Footer */
 
 .footer {
     display: flex;
     align-items: center;
-    margin: 40px auto 0;
+    justify-content: center;
+    margin-top: 2rem;
     padding: 40px 0;
-    max-width: 980px;
-    color: #586069;
-    border-top: 1px solid #e1e4e8;
+    color: #888;
+    background-color: #f2f2f2;
+    border-top: 1px solid #eaeaea;
 }
 
 .footer-list {
