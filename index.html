@@ -5,20 +5,20 @@ title: test
 
 <div class="content">
     {% for loop in site.data.loops %}
-    <div class="loop" id="loop-{{ forloop.index }}">
+    <section class="loop-section" id="loop-{{ forloop.index }}">
         <h2 class="loop-heading">Loop {{ forloop.index }}</h2>
 
         <ol class="loop-items">
             {% for step in loop.steps %}
             <li class="loop-item">
                 <a href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
-                    <span class="item-title">Step {{ forloop.index }} - {{ step.title }}</span>
-                    <img class='loop-image' src=""
+                    <img class='loop-image' src="" alt="step-{{ forloop.index }}"
                          data-src="{{ site.baseurl }}/images/l{{ loop.number }}s{{ forloop.index }}.jpg">
+                    <span class="item-caption">Step {{ forloop.index }} - {{ step.title }}</span>
                 </a>
             </li>
             {% endfor %}
         </ol>
-    </div>
+    </section>
     {% endfor %}
 </div>
