@@ -296,9 +296,11 @@ img[data-src] {
 }
 
 .icon-inline {
-    font-size: 1.1rem;
-    height: 1rem;
+    font-size: .9rem;
+    height: .9rem;
+    width: .9rem;
     vertical-align: text-bottom;
+    margin-left: -.1rem;
 }
 
 .rotate-45 {
