@@ -14,42 +14,58 @@
     <meta property="og:description"
           content="FrontLoops resolutions.">
     <meta property="og:url"
-          content="https://glascode.github.io/front-loops/">
+          content="https://glascode.github.io/frontloops/">
 
     <title>Frontloops resolutions</title>
 
     <link rel="icon" type="image/png" href="images/logo_alt.png">
 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet"
-          href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-          integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
 </head>
 
 <body>
-<header class="header bg-dark">
-    <nav class="header-nav">
-        <ul class="nav nav-tabs justify-content-between bg-dark">
-            {% for loop in site.data.loops %}
-            <li class="nav-item">
-                <a class="nav-link js-nav-link"
-                   href="#loop-{{ forloop.index }}">Loop&nbsp;{{ forloop.index }}</a>
-            </li>
-            {% endfor %}
-            <li class="nav-item">
-                <a class="nav-link"
-                   href="https://github.com/Glascode/frontloops">
-                    Source
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://frontloops.io">
-                    Frontloops
-                </a>
-            </li>
-        </ul>
+<header class="header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Frontloops resolutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbar"
+                aria-controls="navbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+                {% for loop in site.data.loops %}
+                <li class="nav-item">
+                    <a class="nav-link js-nav-link"
+                       href="#loop-{{ forloop.index }}">Loop&nbsp;{{ forloop.index }}</a>
+                </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="https://github.com/Glascode/frontloops">
+                        Source
+                        <i class="material-icons-round icon-inline rotate-45">arrow_upward</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://frontloops.io">
+                        Frontloops
+                        <i class="material-icons-round icon-inline rotate-45">arrow_upward</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>
 
@@ -62,16 +78,12 @@
     <div>Generated with Jekyll</div>
 </footer>
 
+<!-- jQuery and Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
-        crossorigin="anonymous"></script>
-<script>$(document).ready(function () {
-    $('body').bootstrapMaterialDesign();
-});</script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
