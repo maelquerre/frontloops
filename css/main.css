@@ -66,72 +66,77 @@ img[data-src] {
 
 /* Content */
 
-.loop-section {
-    --loop-pink: #ffadb9;
-    --loop-orange: #fb956e;
-}
-
-.loop-section:nth-child(odd) {
-    background-color: var(--loop-pink);
-    background-image: -webkit-linear-gradient(to bottom, var(--loop-pink), var(--loop-orange));
-    background-image: linear-gradient(to bottom, var(--loop-pink), var(--loop-orange));
-}
-
-.loop-section:nth-child(even) {
-    background-color: var(--loop-orange);
-    background-image: -webkit-linear-gradient(to bottom, var(--loop-orange), var(--loop-pink));
-    background-image: linear-gradient(to bottom, var(--loop-orange), var(--loop-pink));
-}
-
 .loop-heading {
     padding-top: 3rem;
     margin-bottom: 3rem;
     font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
-.loop-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.loop-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3%;
     margin: 30px 0 0;
-    padding: 0;
+    padding: 0 2rem;
     list-style: none;
 }
 
-.loop-item {
-    position: relative;
-    margin-bottom: 3%;
-    width: 46%;
+.loop-step {
+    margin-bottom: 3rem;
     font-size: 1.3rem;
     text-decoration: none;
     z-index: 1;
     background-color: #fff;
-    border-radius: 3px;
-    overflow: hidden;
 }
 
-.loop-item a:focus {
+@media screen and (max-width: 900px) {
+    .loop-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .loop-step {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.loop-step a:focus {
     display: block;
     box-shadow: 0 0 0 .4rem rgba(38, 143, 255, .3);
     transition: box-shadow .2s;
 }
 
-.loop-item:hover .item-caption {
-    opacity: 1;
+.loop-step-link {
+    display: block;
 }
 
-.loop-image {
+.loop-step-link:hover {
+    color: currentColor;
+}
+
+.loop-step-image {
     width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    transition: transform .2s;
 }
 
-@media screen and (max-width: 900px) {
-    .loop-item {
-        width: 100%;
-        margin-bottom: 4%;
-    }
+.loop-step-link:hover .loop-step-image {
+    transform: scale(1.05);
+}
+
+.loop-step-subcaption {
+    margin-bottom: .3rem;
+    font-size: 1rem;
+    opacity: .5;
+}
+
+.loop-step-caption {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 /* Footer */

@@ -45,7 +45,7 @@
       dirname: 's08-bank-app'
     - title: 'Google Maps'
       dirname: 's09-google-maps'
-    - title: 'Linkedin page'
+    - title: 'LinkedIn page'
       dirname: 's10-linkedin'
 
 - title: 'Loop 3'

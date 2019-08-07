@@ -8,13 +8,16 @@ title: test
     <section class="loop-section" id="loop-{{ forloop.index }}">
         <h2 class="loop-heading">Loop {{ forloop.index }}</h2>
 
-        <ol class="loop-items">
+        <ol class="loop-steps">
             {% for step in loop.steps %}
-            <li class="loop-item">
-                <a href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
-                    <img class='loop-image' src="" alt="step-{{ forloop.index }}"
+            <li class="loop-step">
+                <a class="loop-step-link text-decoration-none"
+                   href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
+                    <img class='loop-step-image' src=""
+                         alt="step-{{ forloop.index }}"
                          data-src="{{ site.baseurl }}/images/l{{ loop.number }}s{{ forloop.index }}.jpg">
-                    <span class="item-caption">Step {{ forloop.index }} - {{ step.title }}</span>
+                    <h4 class="loop-step-subcaption">Step {{ forloop.index }}</h4>
+                    <h3 class="loop-step-caption">{{ step.title }}</h3>
                 </a>
             </li>
             {% endfor %}
