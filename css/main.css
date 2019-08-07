@@ -144,6 +144,10 @@ img[data-src] {
         padding: 0 2rem;
     }
 
+    .navbar-expand-md .navbar-collapse {
+        height: 100%; /* keep height when a link is clicked with toggle collapse */
+    }
+
     .navbar-expand-md .navbar-nav .nav-item {
         padding: 0 1.3rem;
         border: 0;
