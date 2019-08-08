@@ -1,13 +1,34 @@
+@import url('https://rsms.me/inter/inter.css');
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
 body {
-    color: #333333;
-    font-family: Roboto, sans-serif;
-    background: #F5CC7C;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f5cc7c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 .container {
@@ -40,26 +61,42 @@ body {
 }
 
 .header {
-    margin-bottom: 2em;
     display: flex;
-    font-size: 1.5em;
+    align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
-.side .header button {
+.add-wallet {
     cursor: pointer;
-    height: 2.5em;
-    width: 2.5em;
-    border: none;
-    background-color: transparent;
-    background: url("img/plus.svg");
-    background-size: 100%;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: #000;
+    background-image: url("img/add.svg");
+    background-size: 81%;
     background-position: center;
     background-repeat: no-repeat;
+    outline: none;
+    transition: box-shadow .2s;
 }
 
 .title {
+    font-size: 2rem;
     text-transform: capitalize;
+    letter-spacing: -0.02em;
+}
+
+.add-wallet:hover,
+.add-wallet:focus {
+    opacity: .7;
+}
+
+.add-wallet:focus {
+    opacity: .7;
+    background-image: url("img/activity_indicator.gif");
 }
 
 .wallet {
@@ -69,12 +106,12 @@ body {
     border-radius: 5px;
     border: 1px solid lightgray;
     cursor: pointer;
-    transition: box-shadow .1s;
+    transition: box-shadow .15s;
 }
 
 .wallet.current,
 .wallet:hover {
-    box-shadow: 0 0 0 2px #8B94C2;
+    box-shadow: 0 0 0 3px #3eace6;
 }
 
 .wallet img {
@@ -94,11 +131,7 @@ body {
 }
 
 .balance {
-    font-weight: 700;
-}
-
-.balance--cents {
-    font-size: .7em;
+    font-weight: 600;
 }
 
 .transactions {
@@ -109,7 +142,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2.5em 0;
+    margin: 2.5rem 0;
 }
 
 .transaction--item {
@@ -117,39 +150,14 @@ body {
     align-items: center;
 }
 
-.transaction--icon {
-    margin-right: 2em;
-}
-
-.transaction--icon::before {
-    content: '';
-    display: inline-block;
-    font-weight: 300;
-    width: 1.5em;
-    height: 1.5em;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 50%;
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.credit .transaction--icon::before {
-    background-image: url("img/plus.svg");
-}
-
-.debit .transaction--icon::before {
-    background-image: url("img/minus.svg");
-}
-
 .transaction--title {
-    font-size: 1.3em;
-    font-weight: bold;
+    margin-bottom: .3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .transaction--detail {
-    margin-top: .5em;
     color: darkgray;
 }
 
@@ -157,10 +165,6 @@ body {
     font-size: 1.3em;
 }
 
-.transaction.credit .balance {
-    color: #8CCC66;
-}
-
-.transaction.debit .balance {
-    color: #8B94C2;
+.transaction.credit .balance::before {
+    content: '+';
 }
