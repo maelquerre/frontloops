@@ -53,3 +53,5 @@
       dirname: 's01-nike-flyknit'
     - title: 'Photos'
       dirname: 's02-photos'
+    - title: 'Movies'
+      dirname: 's03-movies'

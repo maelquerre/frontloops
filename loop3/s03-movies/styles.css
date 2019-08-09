@@ -1,0 +1,117 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #2F82B7;
+}
+
+:root {
+    --poster-height: 400px;
+}
+
+.root {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.movie-container {
+    position: relative;
+}
+
+.poster {
+    position: relative;
+    display: block;
+    height: var(--poster-height);
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 1.5rem;
+    left: -1.5rem;
+    right: -1.5rem;
+    padding-top: calc(var(--poster-height) - 1.5rem);
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: 50% 0;
+    transition: transform .25s;
+    transition-timing-function: cubic-bezier(.19, 1.2, .68, 1);
+    z-index: 1;
+}
+
+.movie-container:hover .movie {
+    transform: scale(1);
+}
+
+.movie-info {
+    margin-bottom: 1rem;
+}
+
+.movie-title {
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.movie-description {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-size: .9em;
+    font-weight: 400;
+    color: gray;
+}
+
+.movie-price {
+    margin-top: 1.5rem;
+    font-size: 1.3em;
+    color: #48c148;
+}
+
+.movie-old-price {
+    margin-top: .3rem;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.buy-button {
+    width: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    padding: 1em 0;
+    transition: background-color .15s;
+}
+
+.buy-button:hover {
+    background-color: #333;
+}
+
+.disclaimer {
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .disclaimer {
+        display: block;
+        padding: 2rem;
+        text-align: center;
+        color: #fff;
+    }
+}
