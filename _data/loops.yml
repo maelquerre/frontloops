@@ -51,3 +51,5 @@
   steps:
     - title: 'Nike Flyknit'
       dirname: 's01-nike-flyknit'
+    - title: 'Photos'
+      dirname: 's02-photos'
