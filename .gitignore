@@ -9,4 +9,4 @@ _site/
 
 # Custom files
 solutions/
-design/
+*.mp4

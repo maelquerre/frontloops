@@ -15,9 +15,11 @@ title: test
                 <a class="loop-step-link text-decoration-none"
                    id="loop-{{ loop_number }}-step-{{ forloop.index }}"
                    href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
-                    <img class='loop-step-image' src=""
-                         alt="step-{{ forloop.index }}"
-                         data-src="{{ site.baseurl }}/images/previews/l{{ loop_number }}s{{ forloop.index }}.jpg">
+                    <div class="loop-step-image-wrapper">
+                        <img class="loop-step-image" src=""
+                             alt="step-{{ forloop.index }}"
+                             data-src="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}/design/Loop {{ loop_number }} - Step {{ forloop.index }}.png">
+                    </div>
                     <h4 class="loop-step-subcaption">Step {{ forloop.index }}</h4>
                     <h3 class="loop-step-caption">{{ step.title }}</h3>
                 </a>
