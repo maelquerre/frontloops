@@ -1,6 +1,7 @@
+@import url('https://rsms.me/inter/inter.css');
+
 :root {
     --blue: #5C82EC;
-    --blue-light: #a4c1ff;
 }
 
 .icon-sprite {
@@ -14,7 +15,8 @@ svg {
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
     background: #293246;
 }
 
@@ -27,71 +29,77 @@ body {
     display: flex;
     padding: 40px;
     background: white;
-    border-radius: 5px;
+    border-radius: 1rem;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.side {
+.nav {
+    float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 7%;
-    margin-right: 3%;
+    margin-right: 2rem;
 }
 
-.side--icons {
+.nav-icons {
     color: #ccc;
     border-right: 1px solid #ccc;
 }
 
-.side--buttons {
-    padding: 40px 0;
-}
-
-.logo {
+.nav-brand {
     color: var(--blue);
     cursor: pointer;
 }
 
-.side-button {
+.nav-items {
+    padding: 40px 0;
+}
+
+.nav-item {
     position: relative;
-    display: block;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
     cursor: pointer;
     transition: color .15s;
 }
 
-.side-button::after {
+.nav-item:not(:first-of-type) {
+    margin-top: 1.5rem;
+}
+
+.nav-item::after {
     content: '';
     position: absolute;
     right: 0;
-    vertical-align: middle;
     width: 2px;
     height: 100%;
-    background: var(--blue);
+    background-color: var(--blue);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
     transform: scale(0);
     transition: transform .15s;
 }
 
-.side-button.active::after,
-.side-button:hover::after {
+.nav-item.active::after,
+.nav-item:hover::after {
     transform: scale(1);
 }
 
-.side-button.active,
-.side-button:hover {
+.nav-item.active,
+.nav-item:hover {
     color: var(--blue);
 }
 
 .icon {
-    width: 35px;
-    height: 35px;
+    width: 2rem;
+    height: 2rem;
     margin: 0;
 }
 
 .avatar {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border: 2px solid var(--blue);
     border-radius: 50%;
 }
@@ -100,91 +108,181 @@ body {
     width: 90%;
 }
 
-.subtitle {
-    color: #aaa;
+.content {
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 2rem;
 }
 
 .title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0 2em;
+    margin-bottom: 1rem;
 }
 
 .title {
+    margin: 0;
     font-size: 4em;
     font-weight: 700;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: #aaa;
 }
 
 .button {
-    padding: .5em 2em;
+    padding: .3rem .8rem;
     font-weight: 500;
     color: var(--blue);
     text-decoration: none;
-    text-transform: uppercase;
-    border: 1px solid var(--blue-light);
-    transition: border-color .15s;
+    border: 1px solid var(--blue);
+    border-radius: 3px;
+    opacity: .7;
+    transition: opacity .15s;
 }
 
 .button:hover {
-    border-color: var(--blue);
-}
-
-.grid--row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.33%;
-    height: 250px;
-    background: no-repeat center;
-    background-size: cover;
-}
-
-.image.double {
-    width: 66.66%;
-}
-
-.image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--blue);
-    opacity: 0;
-    transition: opacity .2s;
-    z-index: 0;
-}
-
-.image--actions {
-    opacity: 0;
-    transition: opacity .2s;
-    z-index: 1;
-}
-
-.image:hover::after {
-    opacity: .3;
-}
-
-.image:hover .image--actions {
     opacity: 1;
 }
 
-.image--action {
-    margin: 0 10px;
+.grid {
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.grid-item.double {
+    grid-column-end: span 2
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item:hover::after {
+    opacity: .3;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 130, 236, 0.3);
+    opacity: 0;
+    transition: opacity .15s;
+    z-index: 1;
+}
+
+.grid-item:hover .image-actions {
+    opacity: 1;
+}
+
+.image-action {
     color: white;
     opacity: .7;
     transition: opacity .15s;
     cursor: pointer;
 }
 
-.image--action:hover {
+.image-action:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
+.image-action:hover {
     opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .container {
+        margin-top: 1rem;
+        padding: 1rem;
+        width: initial;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        order: 1;
+    }
+
+    .nav {
+        float: none;
+        order: 2;
+        flex-direction: row;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .nav-icons, .nav-items {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .nav-icons {
+        margin-right: 5%;
+        border-right: 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav-items {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding-right: 0;
+        padding-bottom: .5rem;
+    }
+
+    .nav-item:not(:first-of-type) {
+        margin-top: 0;
+        margin-left: 10%;
+    }
+
+    .nav-item::after {
+        right: initial;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--blue);
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 2px;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .avatar {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .grid {
+        order: 3;
+        grid-auto-rows: 100px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
