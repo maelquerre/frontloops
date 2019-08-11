@@ -39,7 +39,13 @@ img[data-src] {
 }
 
 .content {
-    padding-top: 57px; /* header height */
+    padding-top: 50px; /* header height */
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding-top: 53px; /* header height */
+    }
 }
 
 /* Header */
@@ -162,7 +168,9 @@ img[data-src] {
         border: 0;
     }
 
-    .navbar-nav .nav-link {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-left: 0;
+        padding-right: 0;
         border-bottom: 3px solid transparent;
     }
 
@@ -177,7 +185,11 @@ img[data-src] {
 /* Content */
 
 .loop-section {
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 2rem;
+}
+
+.loop-section:first-of-type {
+    margin-top: 1rem;
 }
 
 .loop-heading {
@@ -188,12 +200,13 @@ img[data-src] {
     letter-spacing: -0.02em;
 }
 
-.loop-steps {
+.loop-steps-list {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 1.5rem;
+    grid-row-gap: 2rem;
     grid-column-gap: 3%;
-    margin: 30px 0 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
     padding: 0;
     list-style: none;
 }
@@ -224,7 +237,6 @@ img[data-src] {
 
 .loop-step-image-wrapper {
     position: relative;
-    margin-bottom: 1rem;
     padding-bottom: 60%;
     height: 0;
     border-radius: 8px;
@@ -241,19 +253,24 @@ img[data-src] {
     object-position: top;
 }
 
-.loop-step-subcaption {
+.loop-step-heading {
+    margin-bottom: .8rem;
+}
+
+.loop-step-subtitle {
     margin-bottom: .3rem;
     font-size: 1rem;
     color: #888;
 }
 
-.loop-step-caption {
+.loop-step-title {
+    margin-bottom: 0;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .loop-section {
         margin: auto;
         padding: 0 2rem 3rem;
@@ -265,15 +282,15 @@ img[data-src] {
     }
 
     .loop-heading {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
-    .loop-steps {
+    .loop-steps-list {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 3rem;
     }
 
-    .loop-step-caption {
+    .loop-step-title {
         font-size: 1.8rem;
         letter-spacing: -0.03em;
     }
