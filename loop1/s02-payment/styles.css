@@ -4,54 +4,54 @@ html, body {
 
 body {
     margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+    padding: 0 5%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
     background: url("img/background.jpg") no-repeat center;
     background-size: cover;
 }
 
 .frame {
     overflow: hidden; /* for the button not to expand the frame */
-    margin: 10% auto;
+    margin: 100px auto;
     padding-top: 1.5em;
-    width: 400px;
+    max-width: 400px;
     background: white;
-    border-radius: 5px;
+    border-radius: 1rem;
     text-align: center;
 }
 
+.dots {
+    display: flex;
+    justify-content: center;
+}
+
 .dot {
-    position: relative;
-    margin-right: 6px;
+    margin-right: 8px;
 }
 
 .dot:last-child {
     margin-right: 0;
 }
 
-.dot::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 6px;
-    height: 6px;
+.dot {
+    width: 8px;
+    height: 8px;
     border-radius: 100%;
     background: #DEDEDE;
 }
 
-.dot.current::after {
-    background: #AAAAAA;
+.dot.active {
+    background: #aaa;
 }
 
 .payment-title {
-    margin-top: .5em;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: -.02em;
 }
 
-.payment-title,
-.payment-methods,
-.next-step-button {
+.payment-title {
     font-weight: 600;
 }
 
@@ -59,18 +59,14 @@ body {
     text-align: left;
 }
 
-.payment-method,
-.next-step-button {
-    font-size: .8em;
-}
-
 .payment-method {
     display: block;
     position: relative;
-    padding: 2em 0 2em 5em;
-    color: #BDB7B1;
+    padding: 1.5rem 0 1.5rem 5rem;
+    color: rgba(0, 0, 0, .4);
     cursor: pointer;
-    border-top: 1px solid #E2E2E2;
+    border-top: 1px solid #ddd;
+    transition: background-color .15s;
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */
     -ms-user-select: none; /* IE 10+ */
@@ -85,23 +81,24 @@ body {
 }
 
 .payment-method:hover {
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
+}
+
+.payment-method::before {
+    content: '';
+    left: 1em;
+    width: 2.5rem;
+    height: 100px;
 }
 
 .payment-method::before,
 .checkmark {
     position: absolute;
     top: 0;
-    height: 5em; /* depend on the padding of .payment-method */
+    height: 100%;
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-}
-
-.payment-method::before {
-    content: "";
-    left: 1em;
-    width: 40px;
 }
 
 .payment-method::after {
@@ -110,15 +107,15 @@ body {
 }
 
 .payment-method.visa::before {
-    background-image: url("img/visa.svg");
+    background-image: url('img/visa.svg');
 }
 
 .payment-method.mastercard::before {
-    background-image: url("img/mastercard.svg");
+    background-image: url('img/mastercard.svg');
 }
 
 .payment-method.maestro::before {
-    background-image: url("img/maestro.svg");
+    background-image: url('img/maestro.svg');
 }
 
 .checkmark {
@@ -127,21 +124,22 @@ body {
 }
 
 input:checked + .payment-method > .checkmark {
-    background-image: url("img/check.svg");
+    background-image: url('img/check.svg');
 }
 
 input:checked + .payment-method {
-    color: black;
+    color: #000;
 }
 
 .next-step-button,
 .next-step-button:visited {
     display: block;
     width: 100%;
-    padding: 1.5em 0;
+    padding: 1em 0;
     color: white;
-    background-color: #5B8DDA;
+    background-color: #5b8dda;
     text-decoration: none;
+    transition: background-color .15s;
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit;
 }
@@ -160,7 +158,7 @@ input:checked + .payment-method {
 }
 
 .next-step-button:hover {
-    background-color: #6490EC;
+    background-color: #517ec3;
 }
 
 .next-step-button:active {
