@@ -7,16 +7,17 @@
     <title>Loop 1 - Step 4</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
           rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-<div class="container">
-    <div class="frame">
-        <div class="frame--header">
-            <h2 class="frame--header-title">Mark Zuckerberg</h2>
-            <button class="close"></button>
-        </div>
-        <div class="frame--content">
+<div class="frame">
+    <div class="frame-header">
+        <h2 class="frame-header-title">Mark Zuckerberg</h2>
+        <button class="btn-close"></button>
+    </div>
+    <div class="frame-content">
+        <div class="frame-messages">
             <p class="date">
                 <span class="date--line"></span>
                 <span class="date--text">Today</span>
@@ -40,11 +41,11 @@
             <div class="block alert receiver">
                 <p class="message--content">You were blocked by the user.</p>
             </div>
-            <div class="input">
-                <input class="input--message" type="text"
-                       placeholder="Enter your message">
-                <input class="input--send" type="submit" value="Send">
-            </div>
+        </div>
+        <div class="frame-input">
+            <input class="input--message" type="text"
+                   placeholder="Enter your message">
+            <input class="input--send" type="submit" value="Send">
         </div>
     </div>
 </div>

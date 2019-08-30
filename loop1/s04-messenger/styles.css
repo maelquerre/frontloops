@@ -1,47 +1,49 @@
-html {
-    --line-color: #DEDEDE;
+:root {
+    --line-color: #ccc;
     --main-color: #6D97D6;
-    --sender-color: #E7EEF6;
-    --receiver-color: #F2F2F2;
+    --sender-color: #bedbf6;
+    --receiver-color: #eee;
     --alert-color: #FDC2C2;
+    --message-radius: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #CDDCE8, #92AFC8);
     background-repeat: no-repeat;
 }
 
-.container {
-    width: 500px;
-    margin: 100px auto;
-}
-
 .frame {
+    height: 100%;
     background-color: white;
 }
 
-.frame--header {
+.frame-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
     color: white;
     background-color: var(--main-color);
-    text-transform: uppercase;
 }
 
-.frame--header-title {
+.frame-header-title {
     position: relative;
     margin: 0;
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
-.frame--header-title::before {
+.frame-header-title::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -52,7 +54,7 @@ body {
     border-radius: 100%;
 }
 
-.close {
+.btn-close {
     width: 30px;
     height: 30px;
     padding: 0;
@@ -66,38 +68,51 @@ body {
     transition: .2s;
 }
 
-.close:hover {
+.btn-close:hover {
     opacity: 1;
     cursor: pointer;
 }
 
-.frame--content {
-    padding: 1em 2em;
+.frame-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: calc(100% - 78px); /* minus header height */
+    overflow: hidden;
+}
+
+.frame-messages {
+    padding-bottom: calc(53px + 1rem);
+    overflow: scroll;
+}
+
+.frame-messages,
+.frame-input {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .date {
     display: flex;
-    color: gainsboro;
-    line-height: 0.5;
-    text-align: center;
-    text-transform: uppercase;
+    align-items: center;
 }
 
 .date--text {
     margin: 0 1em;
+    color: #aaa;
 }
 
 .date--line {
-    margin-top: .2em;
     width: 100%;
     height: 1px;
     background-color: var(--line-color);
 }
 
 .block {
-    margin-top: 1.5em;
-    padding: .8em;
-    max-width: 70%;
+    margin-top: 1.5rem;
+    padding: .8rem;
+    width: fit-content;
+    max-width: 75%;
 }
 
 .block p {
@@ -106,38 +121,16 @@ body {
 
 .block.sender {
     margin-left: auto;
-    border-radius: 5px 0 5px 5px;
+    border-radius: var(--message-radius) .2rem var(--message-radius) var(--message-radius);
 }
 
 .block.receiver {
-    border-radius: 0 5px 5px;
+    border-radius: .2rem var(--message-radius) var(--message-radius);
 }
 
 .message {
     position: relative;
     margin-top: 3em;
-}
-
-.message::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    --triangle-size: 7px;
-}
-
-.message.sender::after {
-    right: calc(var(--triangle-size) * -1);
-    border-width: var(--triangle-size) var(--triangle-size) 0 0;
-    border-color: var(--sender-color) transparent transparent transparent;
-}
-
-.message.receiver::after {
-    left: calc(var(--triangle-size) * -1);
-    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
-    border-color: transparent var(--receiver-color) transparent transparent;
 }
 
 .message.sender {
@@ -151,6 +144,7 @@ body {
 .message--date {
     position: absolute;
     top: -1.5em;
+    font-size: .8rem;
     color: darkgray;
 }
 
@@ -166,11 +160,16 @@ body {
     background-color: var(--alert-color);
 }
 
-.input {
+.frame-input {
     display: flex;
     justify-content: space-between;
-    margin-top: 1em;
-    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-shrink: 0;
+    background-color: #fff;
     border-top: 1px solid var(--line-color);
 }
 
@@ -181,15 +180,33 @@ body {
 }
 
 .input--message {
+    width: 100%;
+    margin-right: 1rem;
     border: none;
 }
 
 .input--send {
     padding: 0;
     background: none;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--main-color);
     border: none;
-    text-transform: uppercase;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    html, body {
+        min-height: 500px;
+    }
+
+    body {
+        padding: 5rem 0;
+    }
+
+    .frame {
+        max-width: 60%;
+        margin: auto;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
 }
