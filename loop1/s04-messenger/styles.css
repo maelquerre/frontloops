@@ -204,7 +204,7 @@ body {
     }
 
     .frame {
-        max-width: 60%;
+        max-width: 50%;
         margin: auto;
         border-radius: 1rem;
         overflow: hidden;
