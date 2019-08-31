@@ -3,31 +3,32 @@ layout: default
 title: test
 ---
 
-<div class="content">
-    {% for loop in site.data.loops %}
-    {% assign loop_number = forloop.index %}
-    <section class="loop-section" id="loop-{{ forloop.index }}">
-        <h2 class="loop-heading">Loop {{ forloop.index }}</h2>
+{% for loop in site.data.loops %}
+{% assign loop_number = forloop.index %}
+<section class="loop-section" id="loop-{{ forloop.index }}">
+    <h2 class="loop-heading">{{ loop.title }}</h2>
 
-        <ol class="loop-steps-list">
-            {% for step in loop.steps %}
-            <li class="loop-step-item">
-                <a class="loop-step-link text-decoration-none"
-                   id="loop-{{ loop_number }}-step-{{ forloop.index }}"
-                   href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
-                    <div class="loop-step-image-wrapper">
-                        <img class="loop-step-image" src=""
-                             alt="step-{{ forloop.index }}"
-                             data-src="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}/design/Loop {{ loop_number }} - Step {{ forloop.index }}.png">
-                    </div>
-                    <div class="loop-step-info">
-                        <h4 class="loop-step-subtitle">Step {{ forloop.index }}</h4>
-                        <h3 class="loop-step-title">{{ step.title }}</h3>
-                    </div>
-                </a>
-            </li>
-            {% endfor %}
-        </ol>
-    </section>
-    {% endfor %}
-</div>
+    <ol class="loop-steps-list">
+        {% for step in loop.steps %}
+        <li class="loop-step-item">
+            <a class="loop-step-link text-decoration-none"
+               id="loop-{{ loop_number }}-step-{{ forloop.index }}"
+               href="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}">
+                <div class="loop-step-image-wrapper">
+                    <img class="loop-step-image" src=""
+                         alt="step-{{ forloop.index }}"
+                         data-src="{{ site.baseurl }}/{{ loop.dirname }}/{{ step.dirname }}/design/Loop {{ loop_number }} - Step {{ forloop.index }}.png">
+                </div>
+                <div class="loop-step-info">
+                    {% assign title = loop.title | slice: 0, 4 %}
+                    {% if title == 'Loop' %}
+                    <h4 class="loop-step-subtitle">Step {{ forloop.index }}</h4>
+                    {% endif %}
+                    <h3 class="loop-step-title">{{ step.title }}</h3>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ol>
+</section>
+{% endfor %}

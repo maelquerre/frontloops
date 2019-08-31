@@ -55,3 +55,9 @@
       dirname: 's02-photos'
     - title: 'Movies'
       dirname: 's03-movies'
+
+- title: 'Other'
+  dirname: 'other'
+  steps:
+    - title: 'Greenhouse'
+      dirname: 'greenhouse'

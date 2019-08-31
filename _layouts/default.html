@@ -8,7 +8,7 @@
 
     <!-- Open Graph Protocol -->
     <meta property="og:image"
-          content="{{ '/images/icon.png' | prepend: site.baseurl }}">
+          content="{{ site.baseurl }}/images/icon.png">
     <meta property="og:title" content="Frontloops">
     <meta property="og:type" content="website">
     <meta property="og:description"
@@ -18,7 +18,7 @@
 
     <title>Frontloops resolutions</title>
 
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
@@ -37,7 +37,7 @@
 <header class="header">
     <nav class="navbar navbar-expand-md navbar-light bg-white">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <img class="navbar-brand-icon" src="images/icon.png" alt="icon">
+            <img class="navbar-brand-icon" src="{{ site.baseurl }}/images/icon.png" alt="icon">
             Frontloops</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbar"
@@ -51,7 +51,7 @@
                 <li class="nav-item">
                     <a class="nav-link js-nav-link"
                        data-toggle="collapse" data-target="#navbar"
-                       href="#loop-{{ forloop.index }}">Loop&nbsp;{{ forloop.index }}</a>
+                       href="#loop-{{ forloop.index }}">{{ loop.title }}</a>
                 </li>
                 {% endfor %}
                 <li class="nav-item">
