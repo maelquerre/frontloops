@@ -220,6 +220,7 @@ img[data-src] {
 
 .loop-step-link {
     display: block;
+    border-radius: 8px;
     transition: transform .2s;
 }
 
@@ -238,7 +239,7 @@ img[data-src] {
     position: relative;
     padding-bottom: 60%;
     height: 0;
-    border-radius: 8px;
+    border-radius: inherit;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
     overflow: hidden;
 }
@@ -286,13 +287,23 @@ img[data-src] {
     }
 
     .loop-steps-list {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 3.3rem;
     }
 
     .loop-step-title {
         font-size: 1.8rem;
         letter-spacing: -0.03em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .loop-section {
+        max-width: 1600px;
+    }
+
+    .loop-steps-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
