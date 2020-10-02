@@ -1,243 +1,254 @@
 *, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
-    font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  line-height: 1.5;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2em;
-    border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .site-logo {
-    width: 60px;
+  width: 60px;
 }
 
 .nav-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-item {
-    padding: 0 1em;
+  padding: 0 1em;
 }
 
-.js-nav-link {
-    font-family: Oswald, sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: inherit;
-    letter-spacing: .5px;
+.nav-link {
+  display: block;
+  padding: 1.25rem .75rem 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-bar {
+  padding: .5rem 1rem;
+  font-size: inherit;
+  background-color: #f5f5f5;
+  border-radius: 9999px;
+  border-color: transparent;
+}
+
+.search-bar::placeholder {
+  color: #ccc;
+}
+
+.search-bar:hover {
+  background-color: #e5e5e5;
+}
+
+.search-bar:focus {
+  outline: none;
 }
 
 .content {
-    display: flex;
-    padding: 50px 100px;
+  display: flex;
+  padding: 50px 2.75rem;
 }
 
 .image {
-    width: 100%;
+  width: 100%;
 }
 
 .side {
-    width: 40%;
-    position: relative;
-    background: #f7f7f7;
-    border-radius: 2px;
+  width: 40%;
+  position: relative;
+  background: #f7f7f7;
 }
 
-.side--number {
-    margin-bottom: 1em;
-    text-align: center;
-    line-height: .8em;
-    font-size: 18em;
-    font-weight: 500;
-    color: #EA4035;
+.side__number {
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: .8em;
+  font-size: 18em;
+  font-weight: 500;
+  color: #ea4035;
 }
 
-.side--preview {
-    position: absolute;
-    top: 160px;
-    left: -100px;
-    width: 400px;
+.side__preview {
+  position: absolute;
+  top: 160px;
+  left: -100px;
+  width: 400px;
+  line-height: 1;
 }
 
 .preview-button {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 29px;
-    height: 29px;
-    color: white;
-    background: #5737EE;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: opacity .15s;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  color: white;
+  background: #5737ee;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity .15s;
 }
 
 .preview-button:hover {
-    opacity: .9;
+  opacity: .9;
 }
 
 .preview-button.heel {
-    top: 60px;
-    left: 100px;
+  top: 60px;
+  left: 100px;
 }
 
 .preview-button.midsole {
-    top: 180px;
-    left: 170px;
+  top: 180px;
+  left: 170px;
 }
 
 .preview-button.uppers {
-    top: 220px;
-    left: 310px;
+  top: 220px;
+  left: 310px;
 }
 
-.side--dots-container {
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
+.side__dots-container {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
 }
 
-.side--dots {
-    margin-left: -50%;
+.dots {
+  margin-left: -50%;
 }
 
-.side--dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    background: white;
-    border-radius: 50%;
-    opacity: .7;
-    transition: opacity .15s;
-    cursor: pointer;
+.dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  opacity: .7;
+  transition: opacity .15s;
+  cursor: pointer;
 }
 
-.side--dot.selected,
-.side--dot:hover {
-    opacity: 1;
+.dot.selected,
+.dot:hover {
+  opacity: 1;
 }
 
 .card {
-    width: 60%;
-    padding: 0 5%;
-    background: white;
-    border-radius: inherit;
+  width: 60%;
+  padding: 0 5%;
+  background: white;
+  border-radius: inherit;
 }
 
 .shoe-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
 
 .shoe-type,
 .shoe-price {
-    font-weight: 400;
-    font-size: 1.2em;
-    margin: 0;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin: 0;
 }
 
 .shoe-price {
-    right: 0;
+  right: 0;
 }
 
 .shoe-name {
-    margin-bottom: .2em;
-    font-size: 2.5em;
-    font-weight: 500;
+  margin-bottom: .2em;
+  font-size: 2.5em;
+  font-weight: 500;
 }
 
 .shoe-description {
-    line-height: 1.5em;
-    margin-bottom: 3em;
+  line-height: 1.5em;
+  margin-bottom: 3em;
 }
 
 /* Sizes section */
 
 .sizes-section {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .sizes-title {
-    margin-bottom: 1em;
-    font-family: Oswald, sans-serif;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .sizes-table {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 1em;
-    grid-gap: 1px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .5rem;
+  margin-top: .5rem;
+  margin-bottom: .75rem;
 }
 
-.value {
-    display: inline-flex;
+.size {
+  display: inline-flex;
 }
 
 .sizes-table input {
-    display: none;
+  display: none;
 }
 
 .checkmark {
-    padding: 1em;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 0 0 1px #e5e5e5;
-    border: 1px solid transparent;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  border-radius: .25rem;
 }
 
-.checkmark:hover {
-    border-color: #111;
-}
-
+.checkmark:hover,
 input:checked ~ .checkmark {
-    color: white;
-    background-color: #111;
-    border-color: #111;
+  border-color: #111;
 }
 
-
-.card--button {
-    font-family: Oswald, sans-serif;
-    font-size: 1em;
-    padding: .8em 4em;
-    text-transform: uppercase;
-    color: white;
-    background-color: #111;
-    border: none;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color .15s;
+.button {
+  font-size: inherit;
+  padding: 1rem 1.5rem;
+  color: white;
+  background-color: #111;
+  border-color: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color .15s;
 }
 
-.card--button:focus,
-.card--button:hover {
-    background-color: #333;
+.button:focus,
+.button:hover {
+  background-color: #333;
 }

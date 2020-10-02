@@ -1,142 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loop 3 - Step 1</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700"
-          rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 3 - Step 1</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 <header class="header">
-    <div class="site-logo">
-        <img class="image" src="img/logo.png">
-    </div>
+  <div class="site-logo">
+    <img
+      alt=""
+      class="image"
+      draggable="false"
+      src="img/logo.png"
+    >
+  </div>
 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Men</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Women</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Kids</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sports</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Customise</a>
-            </li>
-        </ul>
-    </nav>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link" href="#">New Releases</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Men</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Women</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kids</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Customise</a>
+      </li>
+    </ul>
+  </nav>
 
-    <input type="text" placeholder="Search">
+  <input
+    class="search-bar"
+    placeholder="Search"
+    type="search"
+  >
 </header>
 <div class="content">
-    <div class="side">
-        <div class="side--number">19</div>
+  <div class="side">
+    <div class="side__number">19</div>
 
-        <div class="side--preview">
-            <img class="image" src="img/preview.png">
-            <div class="preview-button heel">+</div>
-            <div class="preview-button midsole">+</div>
-            <div class="preview-button uppers">+</div>
-        </div>
-
-        <div class="side--dots-container">
-            <div class="side--dots">
-                <span class="side--dot"></span>
-                <span class="side--dot selected"></span>
-                <span class="side--dot"></span>
-            </div>
-        </div>
+    <div class="side__preview">
+      <img class="image" src="img/preview.png">
+      <div class="preview-button heel">+</div>
+      <div class="preview-button midsole">+</div>
+      <div class="preview-button uppers">+</div>
     </div>
 
-    <div class="card">
-        <div class="shoe-info">
-            <h2 class="shoe-type">Men's Running Shoe</h2>
-            <span class="shoe-price">£105</span>
-        </div>
-
-        <div class="shoe-name">Nike Air Zoom Structure 19</div>
-
-        <div class="shoe-description">
-            With a flexible Flyknit upper placed directly on top of
-            radically
-            reinvented Air cushioning system, The Nike Air VaporMax defies
-            conventional style and provides an unbelievably light, bouncy
-            and
-            flexible feel.
-        </div>
-
-        <div class="sizes-section">
-            <div class="sizes-title">Size</div>
-
-            <form class="sizes-table">
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 39</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 40</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 40.5</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 41</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 42</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 42.5</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 43</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 44</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 44.5</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 45</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 45.5</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 46</span>
-                </label>
-                <label class="value">
-                    <input type="radio" name="size">
-                    <span class="checkmark">EU 47</span>
-                </label>
-            </form>
-        </div>
-
-        <button type="submit" class="card--button">Add to cart</button>
+    <div class="side__dots-container">
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot selected"></span>
+        <span class="dot"></span>
+      </div>
     </div>
+  </div>
+
+  <div class="card">
+    <div class="shoe-info">
+      <h2 class="shoe-type">Men's Running Shoe</h2>
+      <span class="shoe-price">£105</span>
+    </div>
+
+    <div class="shoe-name">Nike Air Zoom Structure 19</div>
+
+    <div class="shoe-description">
+      With a flexible Flyknit upper placed directly on top of
+      radically
+      reinvented Air cushioning system, The Nike Air VaporMax defies
+      conventional style and provides an unbelievably light, bouncy
+      and
+      flexible feel.
+    </div>
+
+    <div class="sizes-section">
+      <div class="sizes-title">Select Size</div>
+
+      <form class="sizes-table">
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="39"
+          >
+          <span class="checkmark">EU 39</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="40"
+          >
+          <span class="checkmark">EU 40</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="40.5"
+          >
+          <span class="checkmark">EU 40.5</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="41"
+          >
+          <span class="checkmark">EU 41</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="42"
+          >
+          <span class="checkmark">EU 42</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="42.5"
+          >
+          <span class="checkmark">EU 42.5</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="43"
+          >
+          <span class="checkmark">EU 43</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="44"
+          >
+          <span class="checkmark">EU 44</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="44.5"
+          >
+          <span class="checkmark">EU 44.5</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="45"
+          >
+          <span class="checkmark">EU 45</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="45.5"
+          >
+          <span class="checkmark">EU 45.5</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="46"
+          >
+          <span class="checkmark">EU 46</span>
+        </label>
+        <label class="size">
+          <input
+            name="size"
+            type="radio"
+            value="47"
+          >
+          <span class="checkmark">EU 47</span>
+        </label>
+      </form>
+    </div>
+
+    <button type="submit" class="button">Add to Bag</button>
+  </div>
 </div>
 </body>
 </html>
